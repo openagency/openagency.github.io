@@ -1,0 +1,264 @@
+ {
+     "kurzy": 
+     [
+         {
+             "nazev": "English for cestovní ruch",
+             "vlajka": "img/flags/en_ruch.jpg",
+             "link": "http://kurzy.anglictinaprocestovniruch.cz/"
+         },
+         
+         {
+             "nazev": "English for chemii",
+             "vlajka": "img/flags/en_chem.jpg",
+             "link": "http://kurzy.anglictinaprochemii.cz/"
+         },
+         
+         {
+             "nazev": "English for obchodníky",
+             "vlajka": "img/flags/en_obch.jpg",
+             "link": "http://kurzy.anglictinaproobchodniky.cz/"
+         },
+         
+         {
+             "nazev": "English for strojaře",
+             "vlajka": "img/flags/en_st.jpg",
+             "link": "http://kurzy.anglictinaprostrojare.cz/"
+         },
+         
+         {
+             "nazev": "German for cestovní ruch",
+             "vlajka": "img/flags/de_ruch.jpg",
+             "link": "http://kurzy.nemcinaprocestovniruch.cz/"
+         },
+         
+         
+         {
+             "nazev": "German for obchodníky",
+             "vlajka": "img/flags/de_obch.jpg",
+             "link": "http://kurzy.nemcinaproobchodniky.cz/"
+         },
+         
+         {
+             "nazev": "German for strojaře",
+             "vlajka": "img/flags/de_st.jpg",
+             "link": "http://kurzy.nemcinaprostrojare.cz/"
+         },
+         
+         {
+             "nazev": "Russian for obchodníky",
+             "vlajka": "img/flags/ru_obch.jpg",
+             "link": "http://kurzy.rustinaproobchodniky.cz/"
+         }
+            
+     ],
+     
+     
+      "produkty": 
+     [
+         
+            {
+               "id": "1",
+               "nazev": "Farmaceutická výroba",
+               "nazevCizi": "Pharmaceutical production",
+               "kategorie": "materialy",
+               "ikona": "img/flags/en_chem.jpg",
+               "autor": "Mgr. Miluše Psotová",
+               "odkaz": "http://kurzy.anglictinaprochemii.cz",
+               "popis": "<ul><li>Partnerství s přírodou</li><li>Původ léčivých látek a výrobků</li><li>Organické sloučeniny</li><li>Lékové formy</li><li>Pomocné farmaceutické látky</li><li>Výroba pevných lékových forem</li><li>Farmaceutická výroba</li><li>Balení léčivých přípravků</li><li>Účinky léků a léčivých přípravků</li><li>Aplikace léčivých přípravků</li></ul>"
+            },
+            
+            {
+              "id": "2",
+              "nazev": "Kvalita a kontrola ve strojírenské výrobě",
+              "nazevCizi": "Quality and Control in mechanical Engineering production",
+              "kategorie": "materialy",
+              "ikona": "img/flags/en_st.jpg",
+              "autor": "Mgr. Linda Miervová a RNDr. Věra Vachalcová",
+              "odkaz": "http://kurzy.anglictinaprostrojare.cz",
+              "popis": "<ul><li>Výrobní proces a kontrola ve strojírenském podniku</li><li>Technická dokumentace I</li><li>Technická dokumentace II</li><li>Kvalita a metrologie</li><li>Základní délková měřidla</li><li>Kontrola tvaru a polohy</li><li>Mechanické zkoušky materiálu</li><li>Kontrola jakosti povrchu</li><li>Testování strojů a zařízení</li><li>Reklamace, příčiny a odstraňování vad</li></ul>" 
+            },
+            
+            {
+              "id": "3",
+              "nazev": "Obchod a marketing",
+              "nazevCizi": "Trade and Marketing",
+              "kategorie": "materialy",
+              "ikona": "img/flags/en_obch.jpg",
+              "autor": "Mgr. Zdeňka Vojtáková",
+              "odkaz": "http://kurzy.anglictinaproobchodniky.cz",
+              "popis": "<ul><li>Navázání kontaktu se zákazníkem</li><li>Prezentace strojírenského podniku a jeho výrobků</li><li>Psaní obchodních dopisů a mailů</li><li>Poptávka a nabídka</li><li>Tvorba ceny a vyjednávání</li> <li>Služební cesta do zahraničí</li><li>Objednávka a smlouva</li><li>Porada a videokonference</li><li>Fakturace a řešení problémů</li><li>Výstavy a veletrhy</li></ul>"
+            },
+                  
+            {
+              "id": "4",
+              "nazev": "Obchod a marketing",
+              "nazevCizi": "Handel und Marketing",
+              "kategorie": "materialy",
+              "ikona": "img/flags/de_obch.jpg",
+              "autor": "Mgr. Milan Pišl, Ph.D.",
+              "odkaz": "http://kurzy.nemcinaproobchodniky.cz",
+              "popis": "<ul><li>Navázání kontaktu se zákazníkem</li><li>Prezentace strojírenského podniku a jeho výrobků</li><li>Psaní obchodních dopisů a mailů</li><li>Poptávka a nabídka</li><li>Tvorba ceny a vyjednávání</li> <li>Služební cesta do zahraničí</li><li>Objednávka a smlouva</li><li>Porada a videokonference</li><li>Fakturace a řešení problémů</li><li>Výstavy a veletrhy</li></ul>"
+            },
+          
+            {
+              "id": "5",
+              "nazev": "Obchod a marketing",
+              "nazevCizi": "Торговля и маркетинг",
+              "kategorie": "materialy",
+              "ikona": "img/flags/ru_obch.jpg",
+              "autor": "RNDr. Věra Vachalcová",
+              "odkaz": "http://kurzy.rustinaproobchodniky.cz",
+              "popis": "<ul><li>Navázání kontaktu se zákazníkem</li><li>Prezentace strojírenského podniku a jeho výrobků</li><li>Psaní obchodních dopisů a mailů</ li><li>Poptávka a nabídka</ li><li>Tvorba ceny a vyjednávání</li><li>Služební cesta do zahraničí</ li><li>Objednávka a smlouva</ li><li>Porada a videokonference</ li><li>Fakturace a řešení problémů</ li><li>Výstavy a veletrhy</ li></ ul>"                
+            },
+            
+            {
+              "id": "6",
+              "nazev": "Obchod v cestovním ruchu",
+              "nazevCizi": "Trade in the travel and tourism industries",
+              "kategorie": "materialy",
+              "ikona": "img/flags/en_ruch.jpg",
+              "autor": "RNDr. Věra Vachalcová",
+              "odkaz": "http://kurzy.anglictinaprocestovniruch.cz",
+              "popis": "<ul><li>Navázání obchodního kontaktu</li><li>Prezentace hotelu a jeho služeb</li><li>Rozvíjení obchodních kontaktů</li><li>Poptávka a nabídka</li><li>Cenová kalkulace a vyjednávání</li><li>Webové stránky hotelu</li><li>Smlouvy o spolupráci</li><li>Porady</li><li>Fakturace a řešení problémů</li><li>Výstavy a veletrhy</li></ul>"
+            },
+            
+            {
+              "id": "7",
+              "nazev": "Obchod v cestovním ruchu",
+              "nazevCizi": "Handel im Tourismus",
+              "kategorie": "materialy",
+              "ikona": "img/flags/de_ruch.jpg",
+              "autor": "Mgr. Kateřina Slaninová",
+              "odkaz": "http://kurzy.nemcinaprocestovniruch.cz",
+              "popis": "<ul><li>Navázání obchodního kontaktu</li><li>Prezentace hotelu a jeho služeb</li><li>Rozvíjení obchodních kontaktů</li><li>Poptávka a nabídka</li><li>Cenová kalkulace a vyjednávání</li><li>Webové stránky hotelu</li><li>Smlouvy o spolupráci</li><li>Porady</li><li>Fakturace a řešení problémů</li><li>Výstavy a veletrhy</li></ul>"
+            },
+            
+            {
+              "id": "8",
+              "nazev": "Služby v cestovním ruchu",
+              "nazevCizi": "Services in the Travel Trade",
+              "kategorie": "materialy",
+              "ikona": "img/flags/en_ruch.jpg",
+              "autor": "Mgr. Zdeňka Vojtáková",
+              "odkaz": "http://kurzy.anglictinaprocestovniruch.cz",
+              "popis": "<ul><li>Vítejte u nás</li><li>Turistické informační centrum</li><li>Hotelové služby</li><li>Hotelová zařízení</li><li>Stravovací služby</li><li>Obsluha hostů</li><li>Problémy a stížnosti</li><li>Cestování a doprava</li><li>Kulturní, sportovní a společenské akce</li><li>Nouzové situace</li></ul>"
+            },
+            
+            {
+              "id": "9",
+              "nazev": "Služby v cestovním ruchu",
+              "nazevCizi": "Dienstleistungen im Tourismus",
+              "kategorie": "materialy",
+              "ikona": "img/flags/de_ruch.jpg",
+              "autor": "Mgr. Kateřina Slaninová",
+              "odkaz": "http://kurzy.nemcinaprocestovniruch.cz",
+              "popis": "<ul><li>Vítejte u nás</li><li>Turistické informační centrum</li><li>Hotelové služby</li><li>Hotelová zařízení</li><li>Stravovací služby</li><li>Obsluha hostů</li><li>Problémy a stížnosti</li><li>Cestování a doprava</li><li>Kulturní, sportovní a společenské akce</li><li>Nouzové situace</li></ul>"
+            },
+            
+            {
+              "id": "10",
+              "nazev": "Stroje a zařízení",
+              "nazevCizi": "Machinery and Equipment",
+              "kategorie": "materialy",
+              "ikona": "img/flags/en_st.jpg",
+              "autor": "RNDr. Věra Vachalcová",
+              "odkaz": "http://kurzy.anglictinaprostrojare.cz",
+              "popis": "<ul><li>Základní veličiny v mechanice</li><li>Šrouby, kolíky, čepy</li><li>Spoje hřídele s nábojem</li><li>Hřídele a ložiska</li><li>Převody a převodovky</li><li>Spojky a brzdy</li><li>Pneumatické a hydraulické mechanismy</li><li>Zvedací zařízení</li><li>Motory</li><li>Elektrotechnika (silnoproudá)</li></ul>"
+            },
+                    
+            {
+              "id": "11",
+              "nazev": "Strojírenská technologie",
+              "nazevCizi": "Engineering Technology",
+              "kategorie": "materialy",
+              "ikona": "img/flags/en_st.jpg",
+              "autor": "Mgr. Linda Miervová",
+              "odkaz": "http://kurzy.anglictinaprostrojare.cz",
+              "popis": "<ul><li>Strojírenská výroba</li><li>Materiály a polotovary</li><li>Tepelné a chemicko – tepelné zpracování</li><li>Obrábění I</li><li>Obrábění II</li><li>Povrchové úpravy</li><li>Svařování</li><li>Pájení a elektrojiskrové obrábění</li><li>Montáž strojních zařízení</li><li>Tváření</li></ul>"
+            },
+            
+            {
+              "id": "12",
+              "nazev": "Strojírenská technologie",
+              "nazevCizi": "Maschinentechnologie",
+              "kategorie": "materialy",
+              "ikona": "img/flags/de_st.jpg",
+              "autor": "Mgr. Kateřina Slaninová",
+              "odkaz": "http://kurzy.nemcinaprostrojare.cz",
+              "popis": "<ul><li>Strojírenská výroba</li><li>Materiály a polotovary</li><li>Tepelné a chemicko – tepelné zpracování</li><li>Obrábění I</li><li>Obrábění II</li><li>Povrchové úpravy</li><li>Svařování</li><li>Pájení a elektrojiskrové obrábění</li><li>Montáž strojních zařízení</li><li>Tváření</li></ul>"
+            },     
+          
+            {
+              "id": "13",
+              "nazev": "Výroba a zpracování plastů",
+              "nazevCizi": "Plastic production and processing",
+              "kategorie": "materialy",
+              "ikona": "img/flags/en_chem.jpg",
+              "autor": "Mgr. Kateřina Schleierová",
+              "odkaz": "http://kurzy.anglictinaprochemii.cz",
+              "popis": "<ul><li>Vlastnosti materiálů</li><li>Výroba plastů</li><li>Strojní zařízení I – vstřikovací linka</li><li>Strojní zařízení II –formy</li><li>Technologie I – vstřikování</li><li>Technologie II – vyfukování a válcování</li><li>Příprava výroby</li><li>Blokové schéma výroby</li><li>Organizační struktura výrobního podniku</li><li>Portfolio výrobků</li></ul>"
+            },
+          
+            {
+              "id": "14",
+              "nazev": "Zajišťování kvality a bezpečnost práce",
+              "nazevCizi": "Quality Assurance and Safety at Work in the Pharmaceutical and Plastic processing Industries",
+              "kategorie": "materialy",
+              "ikona": "img/flags/en_chem.jpg",
+              "autor": "Mgr. Zdeňka Vojtáková a Mgr. Simona Martinková",
+              "odkaz": "http://kurzy.anglictinaprochemii.cz",
+              "popis": "<ul><li >Vady plastového materiálu a výrobků</li><li>Příčiny vad a jejich důsledky</li><li>Měření a zkoušení plastových dílů</li><li>Zajišťování kvality</li>                <li>Ochrana zdraví a bezpečnost práce I</li><li>Ochrana zdraví a bezpečnost práce II</li><li>Požární ochrana</li><li>Ochrana životního prostředí</li><li>Správná výrobní praxe I</li><li>Správná výrobní praxe II</li></ul>"
+            },
+                       
+            {
+              "id": "15",
+              "nazev": "Základní chemická terminologie",
+              "nazevCizi": "Basic Chemical Terminology",
+              "kategorie": "materialy",
+              "ikona": "img/flags/en_chem.jpg",
+              "autor": "Mgr. Simona Martinková",
+              "odkaz": "http://kurzy.anglictinaprochemii.cz",
+              "popis": "<ul><li>Vybavení laboratoře I</li><li>Směsi</li><li>Vybavení laboratoře II</li><li>Nekovy, polokovy</li><li>Kovy</li><li>Chemické názvosloví I</li><li>Metody oddělování složek směsí</li><li>Chemické názvosloví II</li><li>Chemické reakce</li><li>Roztoky</li></ul>"      
+            }              
+     ],
+     
+     "sluzby": 
+     [
+         
+          {
+             "id": "1",
+             "kategorie": "vyuka",
+             "nazev": "Intenzivní jazykové kurzy pro podniky",
+             "popis": "<p>Intenzivní jazykový kurz s certifikovaným lektorem představuje 40 hodin výuky a´45 minut, zpravidla 4 hodiny týdně.</p><p>V intenzivním jazykovém kurzu maximálně 6 účastníků ve skupině.</p>"
+          },
+                
+          { 
+             "id": "2",
+             "kategorie": "ucitele",
+             "nazev": "Metodický kurz",
+             "popis": "<p><b>Metodický kurz</b>  je určen pro učitele a lektory cizích jazyků, kteří již úspěšně splnili jeden online kurz OPEN LEARNING. Kurz probíhá prezenčně v jednom dni na různých místech České republiky. Minimální počet účastníků v kurzu je 6, maximální 8.</p> <p>Obsah kurzu je rozdělen do tří bloků:</p><ul><li>změny obsahu a metod jazykového vzdělávání, organizace a plánování výuky a učení</li> <li>práce s texty, poslechy, videonahrávkami, cvičeními a testy</li> <li>hodnocení výsledků jazykového vzdělávání, změna role lektora a učitele</li>  </ul><p>V ceně kurzu je příručka pro lektora.</p>"
+          },
+          
+          {
+             "id": "3",
+             "kategorie": "ucitele",
+             "nazev": "Mentoring a podpora lektorů a učitelů",
+             "popis": "<p>Naší filozofií je aktivní spolupráce s lektory a učiteli, kteří používají výukové materiály OPEN LEARNING a mají nejblíže k uživatelům výukových materiálů, k žákům a studentům. Naším cílem je efektivní výuka a učení se cizích jazyků, jsme si vědomi, že <b>sebelepší výukové materiály bez patřičného uchopení vyučujícím a bez zakotvení do promyšleného edukačního procesu nemohou vést k úspěchu.</b></p> <p>Učitelům a školám poskytujeme dlouhodobou podporu při hledání efektivní cesty žák – učitel – kurikulum prostřednictvím aktivit pedagogických konzultantů přímo ve školách. S jejich podporou se učitelé mohou učit ve třídě v běžných situacích.</p><p>Certifikovaným lektorům nabízíme <b>setkání k výměně zkušeností mezi lektory a učiteli</b>, kteří výukové materiály OPEN LEARNING využívají jak ve školách, tak při výuce ve firmách. Navazujeme a prohlubujeme vzájemné kontakty mezi lektory a učiteli, kteří sdílejí podobné názory na výuku cizích jazyků, trendy v jejím vývoji a kteří mají chuť a motivaci dále tyto trendy aktivně vnímat a využívat ve své praxi. </p><p>Certifikovaní lektoři a učitelé mají možnost zapojit se do „cross mentoringu“, kdy se setkávají ve výuce učitelé a lektoři z různých segmentů vzdělávání a s různými zkušenostmi.</p>"
+          },
+                    
+          {
+             "id": "4",
+             "kategorie": "vyuka",
+             "nazev": "Online kurzy pro veřejnost",
+             "popis": "<p>Online kurz trvá zpravidla tři měsíce, kdy má student přístup k deseti online lekcím a certifikovaný lektor hodnotí jeho úkoly.</p><p>V online kurzu i v jazykovém kurzu garantujeme rozvoj všech jazykových dovedností.</p>"
+          },
+           
+          {
+             "id": "5",
+             "kategorie": "ucitele",
+             "nazev": "Výuka jazyků se zaměřením na odborné předměty SŠ",
+             "popis": "<p>Kurz Výuka cizích jazyků se zaměřením na odborné předměty středních škol je akreditovaný MŠMT v rámci v systému DVPP pod č.j.: MŠMT -17744/2014-1-561. </p> <p>Kurz je určen pro učitele cizích jazyků a odborných předmětů ve středních školách. Učitelé a lektoři se seznámí se základy managementu výuky ve třídě s využitím online technologií, nejnovějšími trendy ve výuce cizích jazyků a systematickým zaváděním CLILu.</p> <p>Dvě části kurzu:</p> <ul><li>1. Online kurz odborného cizího jazyka OPEN LEARNING dle volby jazyka a obsahu</li> <li>2. Metodický kurz</li></ul><p>Podmínkou účasti v Metodickém kurzu je absolvování online kurzu odborného cizího jazyka. Tímto učitelé poznají praxi žáků při online učení a lépe ji propojí s metodickými doporučeními a plánováním výuky ve třídě dle konceptu OPEN LEARNING.</p> <p>Cílem je zprostředkovat praktický návod, jak se učit odborný cizí jazyk a využívat efektivně online technologie při výuce odborného cizího jazyka nebo části odborného předmětu v cizím jazyce. Učitelé se seznámí se změnami v obsahu a metodách jazykového vzdělávání, s konkrétními náměty pro organizaci výuky a učení, práci s odbornými texty a cvičeními, hodnocení výsledků vzdělávání a se změnou role učitele.</p>  <p><b>Kurz může být realizován přímo u Vás ve škole</b>. Minimální počet účastníků v kurzu je 6, maximální 8. V ceně je online kurz, k němu učebnice a online podpora lektora, metodický kurz a k němu příručka pro lektora.</p> "  
+          }
+        
+     ]
+ }
