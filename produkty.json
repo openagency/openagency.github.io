@@ -207,55 +207,5 @@
             "odkaz": "http://kurzy.openlearning.cz",
             "popis": "<ul><li>Čísla a číslice</li><li>Základní výpočty v aritmetice</li><li>Zlomky, desetinná čísla a procenta</li><li>Geometrie v rovině</li><li>Geometrická tělesa a rýsování</li></ul>"
         }
-    ],
-    "sluzby": [
-        {
-            "id": "1",
-            "kategorie": "vyuka",
-            "nazev": "Intenzivní jazykové kurzy pro podniky",
-            "popis": "<p>Intenzivní jazykový kurz s certifikovaným lektorem představuje 40 hodin výuky a´45 minut, zpravidla 4 hodiny týdně.</p><p>V intenzivním jazykovém kurzu maximálně 6 účastníků ve skupině.</p>"
-        },
-        {
-            "id": "2",
-            "kategorie": "ucitele",
-            "nazev": "CLIL a blended learning v cizojazyčné výuce",
-            "popis": "<p>Kurz CLIL a blended learning v praxi škol je akreditovaný v systému DVPP pod č.j.: 10195/2016-1-331 v rozsahu 8 vyučovacích hodin. Je určen pro ředitele škol, učitele cizích jazyků a nejazykových předmětů v základních a středních školách.</p><p>Obsahuje čtyři bloky: Moderní cizojazyčná výuka a řízení výuky CLIL ve třídě,  Aktivity před a po CLIL vyučovací hodině, Výuka odborné terminologie a blended learning, Praktické využití videa při samostatné práci žáků.</p><p><b>Kurz může být realizován přímo u Vás ve škole v termínu, který Vám bude vyhovovat.</b>. Minimální počet účastníků v kurzu je 12. Učitelé obdrží certifikát z kurzu DVPP.</p>"
-        },
-        {
-            "id": "3",
-            "kategorie": "ucitele",
-            "nazev": "Mentoring a podpora lektorů a učitelů",
-            "popis": "<h5>Mentoring</h5><p>Učitelům a lektorům poskytujeme mentoring na základě objednávky školy a specifikace konkrétních požadavků učitelů. <strong>Mentor s učitelem v jednom dni sdílí výuku 1 vyučovací hodiny a 1 hodinu vede s učitelem řízený rozhovor.</strong> Společně stručně zaznamenají výsledek rozhovoru a stvrdí to svými podpisy. Každá jednotka mentoringu je věnovaná jednomu učiteli v rozsahu max. 6 hodin během jednoho měsíce. Certifikovaní lektoři a učitelé mají možnost zapojit se do „cross mentoringu“, kdy se setkávají ve výuce učitelé z různých škol a s různými zkušenostmi.</p><h5>Konzultace k zavedení výuky odborného cizího jazyka, blended learning a CLIL</h5><p>Školám poskytujeme konzultace k zavádění moderních metod a nástrojů jazykového vzdělávání na základě objednávky školy a specifikace konkrétních požadavků učitelů. Konzultant s vedením školy a učiteli probere jednotlivé požadavky a nabídne možné řešení, společně stručně zaznamenají výsledek konzultace a stvrdí to svými podpisy. Každá konzultace je věnovaná jedné škole  v rozsahu max. 6 hodin v jednom dni.</p><h5>Setkání učitelů a lektorů OPEN LEARNING ke sdílení zkušeností</h5><p>Certifikovaným učitelům a lektorům nabízíme možnost dvakrát ročně se účastnit <strong>setkání k výměně zkušeností mezi lektory a učiteli</strong>, kteří výukové materiály OPEN LEARNING využívají jak ve školách, tak při výuce ve firmách. Navazujeme a prohlubujeme vzájemné kontakty mezi lektory a učiteli, kteří sdílejí podobné názory na výuku cizích jazyků, trendy v jejím vývoji a kteří mají chuť a motivaci dále tyto trendy aktivně vnímat a využívat ve své praxi.</p>"
-        },
-        {
-            "id": "4",
-            "kategorie": "vyuka",
-            "nazev": "Online kurzy pro lektory, učitele, zájemce z řad veřejnosti",
-            "popis": "<p>Online kurz trvá zpravidla tři měsíce, kdy má student přístup k deseti online lekcím a certifikovaný lektor hodnotí jeho úkoly.</p><p>V online kurzu garantujeme rozvoj všech jazykových dovedností.</p>"
-        },
-        {
-            "id": "5",
-            "kategorie": "ucitele",
-            "nazev": "Jazykové kurzy odborné angličtiny a němčiny pro učitele akreditované v systému DVPP",
-            "popis": "<p><strong>Kurzy mohou být realizovány přímo u Vás ve škole v termínu, který Vám bude vyhovovat.</strong> Minimální počet účastníků v kurzu je 6.</p><p><strong>Výuka cizích jazyků se zaměřením na odborné předměty středních škol</strong><br>Obsahuje: 6 hodin výuky, online jazykový kurz, učebnici a příručku pro lektory, č.j. MSMT-7403/2017-1-417</p><p><strong>Konverzace v anglickém jazyce pro učitele matematiky ZŠ a SŠ</strong><br>Obsahuje: 18 hodin výuky, učebnici, online podporu, č.j. MSMT-24121/2016-3-746</p><p><strong>Engineering Technology – odborná angličtina pro učitele technických oborů</strong><br>Obsahuje: 16 hodin výuky, učebnici, online podporu, č.j. MSMT- 7403/2017-1-417</p><p><strong>Machinery and Equipment – odborná angličtina pro učitele technických oborů</strong><br>Obsahuje: 16 hodin výuky, učebnici, online podporu, č.j. MSMT - 7176/2019-1-368</p><p><strong>Quality and Control in mechanical Engineering production – odborná angličtina pro učitele technických oborů</strong><br>Obsahuje: 16 hodin výuky, učebnici, online podporu, č.j. MSMT - 7176/2019-1-368</p><p><strong>Services in the Travel Trade – odborná angličtina pro učitele oborů hotelnictví, gastronomie a cestovní ruch</strong><br>Obsahuje: 16 hodin výuky, učebnici, online podporu, č.j. MSMT- 7403/2017-1-417</p><p><strong>Trade and Marketing – odborná angličtina pro učitele ekonomických oborů</strong><br>Obsahuje: 16 hodin výuky, učebnici, online podporu, č.j. MSMT- 7403/2017-1-417</p><p><strong>Maschinentechnologie – odborná němčina pro učitele technických oborů</strong><br>Obsahuje: 16 hodin výuky, učebnici, online podporu, č.j. MSMT - 12991/2017-1-688</p><p><strong>Dienstleistungen im Tourismus – odborná němčina pro učitele oborů hotelnictví, gastronomie a cestovní ruch</strong><br>Obsahuje: 16 hodin výuky, učebnici, online podporu, č.j. MSMT - 12991/2017-1-688</p><p><strong>Handel und Marketing – odborná angličtina pro učitele ekonomických oborů</strong><br>Obsahuje: 16 hodin výuky, učebnici, online podporu, č.j. MSMT - 12991/2017-1-688</p>"
-        },
-        {
-            "id": "6",
-            "kategorie": "vyuka",
-            "nazev": "Rekvalifikační kurz Zprostředkovatel obchodu",
-            "popis": "<p>OPEN AGENCY s.r.o. získala v květnu 2015 akreditaci Ministerstva školství, mládeže a tělovýchovy, č.j. MSMT-4564/2015-1/199 rekvalifikačního kurzu Zprostředkovatel obchodu. Rekvalifikační kurz je odrazovým můstkem pro všechny, které zajímá problematika vyhledávání nových příležitostí a nových trhů v zahraničí. Je určen majitelům firem, obchodníkům, marketingovým pracovníkům, hoteliérům a všem, kteří potřebují jednat se zákazníky a obchodními partnery v angličtině.</p> <p>Nabízíme zaměstnancům firem rekvalifikaci, u které hradí Úřad práce až 100 % nákladů. Zaměstnavatel může využít pro zaměstnance rekvalifikaci zaměstnaneckou, zaměstnanci i nezaměstnaní rekvalifikaci zvolenou.</p><p><li>220 hodin teoretické výuky</li><li>80 hodin praktické výuky</li><li>odborná obchodní angličtina</li><li>3 - 6 účastníků ve skupině</li><li>místo a termín konání dle domluvy</li><li>učebnice a přístup do výukového online sešitu</li><li>certifikát po absolvování kurzu</li><li>jednoduchá administrativa</li></p><p>V případě zájmu o další informace nás kontaktujte na stankova@openagency.cz.</p>"
-        },
-        {
-            "id": "7",
-            "kategorie": "vyuka",
-            "nazev": "<small>CLIL v matematice v ZŠ a SŠ</small>",
-            "popis": "<p>Jazykový kurz CLIL v matematice v ZŠ a SŠ je akreditovaný MŠMT v rámci v systému DVPP pod č.j.: MSMT – 32365/2018-1-942 v rozsahu 8 vyučovacích hodin.</p> <p><strong>Kurz je určen pro učitele matematiky v základních školách a středních školách.</strong> Cílem je připravit učitele matematiky v základních a středních školách.</p><p>Kurz obsahuje lekce:</p><p><li>1. Čísla a číslice</li><li>2. Základní výpočty v aritmetice</li><li>3. Zlomky, desetinná čísla a procenta</li><li>4. Geometrie v rovině</li><li>5. Geometrická tělesa a rýsování</li></p><p><strong>Kurz může být realizován přímo u Vás ve škole v termínu, který Vám bude vyhovovat.</strong> Minimální počet účastníků je 6. Učitelé obdrží certifikát z kurzu DVPP.</p>"
-        },
-        {
-            "id": "8",
-            "kategorie": "vyuka",
-            "nazev": "<small>Konverzace v anglickém jazyce pro učitele matematiky ZŠ a SŠ</small>",
-            "popis": "<p>Kurz Konverzace v anglickém jazyce pro učitele matematiky ZŠ a SŠ je akreditovaný v systému DVPP pod č.j.: 24121/2016-3-746 v rozsahu 18 vyučovacích hodin. Kurz je určen všem učitelům matematiky základních a středních škol, kteří se chtějí zlepšit v běžné komunikaci a odborné terminologii v anglickém jazyce.</p><p>Studium probíhá v rozsahu 18 vyučovacích hodin jako prezenční jazykový kurz ve skupinách o počtu min. 3 a max. 6 účastníků.</p><p><strong>Klíčová témata kurzu:</strong></p><p><li>Čísla a číslovky, číselná osa</li><li>Základní matematické operace v aritmetice</li><li>Zlomky</li><li>Desetinná čísla a procenta</li><li>Slovní úlohy, vzorce, rovnice</li><li>Geometrie v rovině</li><li>Trojúhelník</li><li>Tělesa</li><li>Konstruktivní úlohy</li></p><p>V kurzu budou použity <strong>tištěné i digitální výukové materiály s videonahrávkami a texty částečně namluvenými rodilými mluvčími.</strong> Během studia si učitelé vyzkoušejí blended learning, v budoucnu naprosto nepostradatelnou součást každodenní výuky.</p><p><li>Cena kurzu pro 3 účastníky 10 610,- Kč</li><li>Cena kurzu pro 4 účastníky 11 300,- Kč</li><li>Cena kurzu pro 5 účastníků 11 990,- Kč</li><li>Cena kurzu pro 6 účastníků 12 680,- Kč</li></p><p>Vstupní jazyková úroveň učitele je min. <strong>A2</strong> - max. <strong>B1</strong>.</p><p>Termíny a místo výuky dle domluvy. <strong>Kurz může být realizován přímo u Vás ve škole.</strong> Závazně lze kurz objednat mailem na základě upřesnění požadavků školy.</p>"
-        }
     ]
 }
