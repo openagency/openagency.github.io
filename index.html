@@ -96,7 +96,7 @@
                      <li>9. Každému uživateli je přiřazen <b>uživatelský účet</b>.</li>
                      <li>10. <b>Učitel má přehled</b> o aktivitách žáků v jednotlivých lekcích a může poskytovat zpětnou vazbu každému žákovi.</li>
                   </ul>
-                  <p><a href="#products">Podívejte se na obsahu výukových materiálů</a></p>
+                  <p><a href="#products"><b>Podívejte se na obsahu výukových materiálů</b></a></p>
                </div>
             </div>
          </div>
@@ -139,7 +139,7 @@
                   <p>Výuka ve firmách má v OPEN AGENCY dlouholetou tradici a <b>výborné reference od podniků</b> ve strojírenství, elektrotechnice, výrobě plastů, chemickém průmyslu, cestovním ruchu, marketingu a mezinárodním obchodě. <b>Realizujeme skupinovou i individuální výuku</b> odborné angličtiny, němčiny a ruštiny. Kurzy připravujeme <b>na míru</b> na základě důkladné analýzy přání a cílů klienta. Přednostně dbáme na kvalitu výuky a garantujeme kvalifikované české i zahraniční učitele s praxí. Kurzy se uskutečňují prezenční formou a konají se přímo <b>u vás v podniku</b>.</p>
 
                   <p>Klademe důraz na <b>propojení obsahu výuky s praxí</b> a individuální potřeby studentů. Úzce spolupracujeme s odborníky z podniků a rodilými mluvčími z oboru. V kurzech ve firmách se soustředíme na rozvoj všech jazykových dovedností, odbornou slovní zásobu a především schopnost tyto nabyté vědomosti <b>v praxi používat</b>.</p>
-                  <p><a href="#reference">Podívejte se na reference firem</a></p>
+                  <p><a href="#reference"><b>Podívejte se na reference firem</b></a></p>
                </div>
             </div>
          </div>
@@ -406,7 +406,7 @@
                            <img src="img/icons/service-icon-1.png" alt="Přehlednost" class="prior"/>
                         </div>
                         <div class="service-desc">
-                           <h5>Nabízíme výukové materiály pro žáky</h5>
+                           <h5>Nabízíme výukové materiály</h5>
                            <p>Výukové materiály pro žáky připravující se na profese v průmyslu a službách
                            </p>
                         </div>
@@ -954,18 +954,6 @@
                </div>
             </div>
          </div>
-
-
-      </section>
-      <section id="start" class="home-section text-center">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-8 col-lg-offset-2">
-                  <h2>Připraveni? Začněte již dnes!</h2>
-                  <a class="btn btn-lg btn-primary start-btn" target="_top" href="mailto:kuncarova@openagency.cz?Subject=Poptávka z webu" role="button">Začít ihned</a>
-               </div>
-            </div>
-         </div>
       </section>
       <section id="contact" class="home-section text-center">
          <div class="heading-contact">
@@ -1049,9 +1037,9 @@
                      </address>
                      <address>
                         <strong>Email</strong><br>
-                        <a target="_top" href="mailto:info@openagency.cz">info@openagency.cz</a>
+                        <a target="_top" href="mailto:kuncarova@openagency.cz">kuncarova@openagency.cz</a>
                      </address>
-                     <address>
+                     <!--<address>
                         <strong>Přidejte si nás</strong><br>
                         <ul class="company-social">
                            <li class="social-facebook"><a href="https://www.facebook.com/openagency.cz" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -1059,7 +1047,7 @@
                            <li class="social-linkedin"><a href="https://www.linkedin.com/company/open-agency-s-r-o-?trk=nmp_rec_act_company_name" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                            <li class="social-google"><a href="https://plus.google.com/110290286177953994784/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                         </ul>
-                     </address>
+                     </address> -->
                   </div>
                </div>
             </div>
@@ -1181,7 +1169,7 @@
                <div class="modal-body">
                   <div class="left-product-body">
                      <div class="avatar"><img src="img/team/kuncarova-jitka-open-agency.jpg" alt="Jitka Kunčarová" class="img-responsive img-circle" /></div>
-                     <a class="btn btn-lg btn-primary" target="_top" href="mailto:jitka.kuncarova@openagency.cz"  role="button">Kontaktujte mě</a>
+                     <a class="btn btn-lg btn-primary" target="_top" href="mailto:kuncarova@openagency.cz"  role="button">Kontaktujte mě</a>
                   </div>
                   <div class="right-product-body">
                      <h4>Jitka Kunčarová</h4>
@@ -1472,7 +1460,7 @@
             }
             for (var i = 0; i < data.produkty.length; i++) {
                   $('#holder').append('<div class="col-oz-3 col-sm-3 col-md-4 '+data.produkty[i].kategorie+'"> <div class="boxed-grey"> <div class="inner"> <div class="avatar"><img src="'+data.produkty[i].ikona+'" alt="" class="img-responsive img-circle" /></div> <h5>'+data.produkty[i].nazev+'</h5> <div class="abs-button"> <p><a class="btn btn-lg btn-primary" href="#"  data-toggle="modal" data-target="#productModal'+data.produkty[i].id+'" role="button">Zobrazit více</a></p> </div> </div> </div> </div>');
-                  $('#jsonModals').append('<div class="modal fade productMod" id="productModal'+data.produkty[i].id+'" tabindex="-1" role="dialog" aria-labelledby="productModal'+data.produkty[i].id+'" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>  <h4>'+data.produkty[i].nazev+'</h4><p>'+data.produkty[i].nazevCizi+'</p></div><div class="modal-body"><div class="left-product-body"> <div class="avatar"><img src="'+data.produkty[i].ikona+'" alt="Ikona produktu" class="img-responsive img-circle" /></div><p class="author">Autor: '+data.produkty[i].autor+'</p></div><div class="right-product-body">'+data.produkty[i].popis+'</div></div><div class="modal-footer"><a class="btn btn-lg btn-primary" target="_top" href="mailto:jitka.kuncarova@openagency.cz?subject=Objednavka: '+data.produkty[i].nazev+'&body=Dobrý den, mám zájem o modul '+data.produkty[i].nazev+'."  role="button">Objednat</a></div></div></div></div>');
+                  $('#jsonModals').append('<div class="modal fade productMod" id="productModal'+data.produkty[i].id+'" tabindex="-1" role="dialog" aria-labelledby="productModal'+data.produkty[i].id+'" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>  <h4>'+data.produkty[i].nazev+'</h4><p>'+data.produkty[i].nazevCizi+'</p></div><div class="modal-body"><div class="left-product-body"> <div class="avatar"><img src="'+data.produkty[i].ikona+'" alt="Ikona produktu" class="img-responsive img-circle" /></div><p class="author">Autor: '+data.produkty[i].autor+'</p></div><div class="right-product-body">'+data.produkty[i].popis+'</div></div><div class="modal-footer"><a class="btn btn-lg btn-primary" target="_top" href="mailto:kuncarova@openagency.cz?subject=Objednavka: '+data.produkty[i].nazev+'&body=Dobrý den, mám zájem o modul '+data.produkty[i].nazev+'."  role="button">Objednat</a></div></div></div></div>');
                   prCn++;
            }
            for (var i = 0; i < data.sluzby.length; i++) {
