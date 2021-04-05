@@ -1,459 +1,572 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <title>Open Agency s.r.o.</title>
-      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-      <link href="fonts/roboto.css" rel="stylesheet">
-      <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-      <link href="css/animate.css" rel="stylesheet" />
-      <link href="css/style.css" rel="stylesheet">
-      <link href="color/default.css" rel="stylesheet">
-      <link href="css/carousel.css" rel="stylesheet">
-      <link rel="icon" type="image/x-icon" href="img/logo.png">
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-43333241-1', 'auto');
-        ga('send', 'pageview');
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <title>Open Agency s.r.o.</title>
+   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+   <link href="fonts/roboto.css" rel="stylesheet">
+   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+   <link href="css/animate.css" rel="stylesheet" />
+   <link href="css/style.css" rel="stylesheet">
+   <link href="color/default.css" rel="stylesheet">
+   <link href="css/carousel.css" rel="stylesheet">
+   <link rel="icon" type="image/x-icon" href="img/logo.png">
+   <script>
+      (function (i, s, o, g, r, a, m) {
+         i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+         }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-      </script>
-   </head>
-   <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-      <div class="modal fade" id="divideModal" tabindex="-1" role="dialog" aria-labelledby="divideModal" aria-hidden="true">
-         <div class="modal-dialog divideModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <h4>Přihlašovací rozcestník</h4>
-               </div>
-               <div class="modal-body" id="jsonCourses">
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModal" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <h4>Co je OPEN LEARNING?</h4>
-               </div>
-               <div class="modal-body">
-                  <p>Koncept OPEN LEARNING umožňuje efektivnější učení a kontrolu průběhu učení. Průběžné hodnocení výsledků učení zobrazené v online pracovním sešitu okamžitě motivuje studenty k zodpovědnosti za výsledky učení.</p>
-                  <p>Moderní online výukové prostředí OPEN LEARNING umožňuje studentům učit se kdykoli a kdekoli vlastním tempem, ověřovat si okamžitě výsledky cvičení a testů, vracet se libovolně zpět. Učitelé a lektoři mají v prostředí OPEN LEARNING přehled o aktivitách studentů, o výsledcích jejich cvičení a testů, mohou analyzovat nejčastější chyby a korigovat postupy výuky.</p>
-                  <p>OPEN LEARNING zahrnuje tvorbu výukových materiálů, vývoj a provoz online prostředí, certifikační program v oblasti přípravy lektorů a učitelů odborných cizích jazyků včetně hodnocení výsledků vzdělávání.</p>
-                  <p>Výukový soubor tvoří učebnice, online pracovní sešit a příručka pro lektory.</p>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal fade" id="eduModal" tabindex="-1" role="dialog" aria-labelledby="eduModal" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <h4>Výuka s OPEN LEARNING</h4>
-               </div>
-               <div class="modal-body">
-                  <p>OPEN LEARNING je vyučován výhradně certifikovanými lektory a certifikovanými učiteli. Doporučená doba ke zvládnutí deseti lekcí je 10-12 týdnů, což představuje 40 hodin výuky nebo online učení. Kontaktní výuka probíhá s certifikovaným učitelem nebo certifikovaným lektorem zpravidla 4 hodiny týdně. Je doplněna samostudiem s využitím online pracovního sešitu a individuálních konzultací.</p>
-                  <p>OPEN LEARNING umožňuje integrovat výuku předmětu a cizího jazyka a vytvářet podmínky pro osvojení odborné terminologie předmětu v cizím i českém jazyce v souladu s Výnosem č. 9/2013 MŠMT pro vydávání rozhodnutí o povolení výuky některých předmětů v cizím jazyce pro základní a střední školy, který nabyl účinnosti dnem 1. ledna 2014, č.j.: MSMT-46350/2013.</p>
-                  <p>Webová aplikace je navržena moderní technologií pro školy a vzdělávací centra od 1 do 100 počítačů zapojených v síti. Aplikace je velmi intuitivní a klade minimální nároky na školení uživatelů.</p>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal fade" id="materialsModal" tabindex="-1" role="dialog" aria-labelledby="materialsModal" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <h4>Nabízíme výukové materiály pro odborný cizí jazyk</h4>
-               </div>
-               <div class="modal-body">
-                  <p>Výukové materiály pro žáky a učitele</p>
-                  <ul>
-                     <li>Učebnice jsou především určeny učitelům a žákům středních odborných škol s mírně až středně pokročilou znalostí anglického, německého a ruského jazyka. <b>Prioritou učebnic je seznámit žáky v 10 lekcích s odbornou terminologií, a to zejména na základě definic jednotlivých procesů a pojmů</b>.</li>
-                     <li>K učebnici poskytujeme na <b>10 měsíců přístup k online pracovním sešitu</b>. Pracovní sešit obsahuje poslechy, videa a cvičení, která slouží žákům k zvládnutí a upevnění odborné slovní zásoby vlastním tempem v době výuky i mimo výuku ve škole.</li>
-                     <li>V online pracovním sešitě mohou žáci <b>podle svých potřeb</b> využívat výuková videa s frázemi, online testy a úkol ke každé z lekcí. Navíc mají žáci k dispozici odkazy na <b>autentické odborné texty a videa</b>, která se vztahují k probíraným odborným tématům.</li>
-                  </ul>
-                  <p>Deset výhod výukových materiálů pro efektivní učení odborného cizího jazyka:</p>
-                   <ul>
-                     <li>1. Obsah každého kurzu byl vytvářen <b>ve spolupráci s experty z praxe</b>.</li>
-                     <li>2. Učení se vlastním tempem <b>kdykoli a kdekoli</b>.</li>
-                     <li>3. Cesta kurzem je předem známá a <b>snadná</b>.</li>
-                     <li>4. <b>Více pokusů</b> ve cvičeních, testech a úkolech.</li>
-                     <li>5. Žáci <b>předem</b> vědí, co se stane, pokud v testu neuspějí.</li>
-                     <li>6. Možnost <b>online diskuse</b> s učitelem.</li>
-                     <li>7. Žáci <b>vědí</b>, jak bude kurz ukončen.</li>
-                     <li>8. Online pracovní sešit má <b>jednoduché a přehledné ovládání</b>.</li>
-                     <li>9. Každému uživateli je přiřazen <b>uživatelský účet</b>.</li>
-                     <li>10. <b>Učitel má přehled</b> o aktivitách žáků v jednotlivých lekcích a může poskytovat zpětnou vazbu každému žákovi.</li>
-                  </ul>
-                  <p><a href="#products"><b>Podívejte se na obsahu výukových materiálů</b></a></p>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal fade" id="teachersModal" tabindex="-1" role="dialog" aria-labelledby="teachersModal" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <h4>Připravujeme učitele v tandemech</h4>
-               </div>
-               <div class="modal-body">
-                  <p>Jazykové kurzy pro učitele akreditované MŠMT, kde  spolupracuje jazykář s učitelem odborného předmětu</p>
-                  <p>Výuka v tandemu funguje tak, že například v lekci o svařování <b>spolupracuje učitel strojírenské technologie s učitelem angličtiny.</b> Učitel strojírenské technologie vysvětlí jazykáři postup svařování a učitel angličtiny pomůže odborníkovi komunikovat o svařování v cizím jazyce. <b>Tímto se učitel odborník i jazykář zlepší v odborné angličtině.</b>
-                  </p>
-                  <p>
-                  Jazykové kurzy pro učitele jsou akreditované MŠMT v rámci DVPP a mohou být realizovány <b>přímo u vás ve škole</b>. Minimální počet učitelů v kurzu je 6, maximální 8. V ceně kurzu je 16 vyučovacích hodin se zkušeným lektorem, učebnice, online pracovní sešit a příručka pro lektora. Učitelé obdrží <b>certifikát</b> z kurzu DVPP.
-                  </p>
-                  <p>
-                  V jazykových kurzech učitelé <b>dostanou návod</b>, jak vyučovat a učit se odborný cizí jazyk, využívat efektivně online technologie ve výuce. Učitelé se v kurzu prakticky seznámí s obsahem deseti lekcí, metodami, aktivitami a náměty pro organizaci výuky a učení.
-                  </p>
-                  <h4 class="cntr">Jak probíhá následná výuka odborného jazyka ve vaší střední škole?</h4>
-                  <p>Tandemy učitelů, kteří spolu absolvovali jazykový kurz, začnou výuku žáků s našimi materiály v menších skupinách žáků v rozsahu 40 vyučovacích hodin.</p>
-                  <h4 class="cntr">Máme dlouholeté zkušenosti a výborné reference</h4>
-                  <p>Od roku 2015 jsme vyškolili 517 učitelů středních odborných škol a gymnázií v odborném cizím jazyce.</p>
-                  <p>„Spolupráci s OPEN AGENCY jsem velmi uvítal jako další příležitost ke zlepšení jazykové kompetence žáků i učitelů. Hospitační hodiny, kde učitelé užívali metodu CLIL, byly velmi příjemné a všemi směry je zřejmý posun k vyšší kvalitě odborného i jazykového vzdělávání s využitím týmové práce učitelů. Učitelé angličtiny již vědí, o čem je odbornost, které se mladí strojaři učí, učitelé technických předmětů se zdokonalují ve své angličtině a ztrácejí ostych před svými žáky, kteří se vyjadřují s velkou spokojeností.“<br><br>Mgr. Martin Tobiáš – ředitel SPŠ, OA a JŠ, Frýdek-Místek</p>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal fade" id="teachingModal" tabindex="-1" role="dialog" aria-labelledby="teachingModal" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <h4>Vyučujeme ve firmách</h4>
-               </div>
-               <div class="modal-body">
-                  <p>Skupinová a individuální výuka odborné angličtiny, němčiny a ruštiny</p>
-                  <p>Výuka ve firmách má v OPEN AGENCY dlouholetou tradici a <b>výborné reference od podniků</b> ve strojírenství, elektrotechnice, výrobě plastů, chemickém průmyslu, cestovním ruchu, marketingu a mezinárodním obchodě. <b>Realizujeme skupinovou i individuální výuku</b> odborné angličtiny, němčiny a ruštiny. Kurzy připravujeme <b>na míru</b> na základě důkladné analýzy přání a cílů klienta. Přednostně dbáme na kvalitu výuky a garantujeme kvalifikované české i zahraniční učitele s praxí. Kurzy se uskutečňují prezenční formou a konají se přímo <b>u vás v podniku</b>.</p>
+      ga('create', 'UA-43333241-1', 'auto');
+      ga('send', 'pageview');
 
-                  <p>Klademe důraz na <b>propojení obsahu výuky s praxí</b> a individuální potřeby studentů. Úzce spolupracujeme s odborníky z podniků a rodilými mluvčími z oboru. V kurzech ve firmách se soustředíme na rozvoj všech jazykových dovedností, odbornou slovní zásobu a především schopnost tyto nabyté vědomosti <b>v praxi používat</b>.</p>
-                  <p><a href="#reference"><b>Podívejte se na reference firem</b></a></p>
-               </div>
+   </script>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+   <div class="modal fade" id="divideModal" tabindex="-1" role="dialog" aria-labelledby="divideModal"
+      aria-hidden="true">
+      <div class="modal-dialog divideModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+               <h4>Přihlašovací rozcestník</h4>
+            </div>
+            <div class="modal-body" id="jsonCourses">
             </div>
          </div>
       </div>
-      <div class="modal fade" id="schoolModal" tabindex="-1" role="dialog" aria-labelledby="schoolModal" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <h4>OPEN LEARNING ve školách</h4>
-               </div>
-               <div class="modal-body">
-                  <ul>
-                     <li>Angličtina pro chemiky pro obor 28 – <i>Technická chemie a chemie silikátů</i></li>
-                     <li>Angličtina pro strojaře pro obor 23 – <i>Strojírenství a strojírenská výroba</i></li>
-                     <li>Angličtina pro obchodníky pro obory 63 – <i>Ekonomika a administrativa, 66 – Obchod, 23 – Strojírenství a strojírenská výroba</i></li>
-                     <li>Angličtina pro cestovní ruch pro obory 65 – <i>Gastronomie, hotelnictví, turismus, 63 – Ekonomika a administrativa, 66 – Obchod</i></li>
-                     <li>Němčina pro strojaře pro obor 23 – <i>Strojírenství a strojírenská výroba</i></li>
-                     <li>Němčina pro obchodníky pro obory 63 – <i>Ekonomika a administrativa, 66 – Obchod, 23 – Strojírenství a strojírenská výroba</i></li>
-                     <li>Němčina pro cestovní ruch pro obory 65 – <i>Gastronomie, hotelnictví, turismus, 63 – Ekonomika a administrativa, 66 – Obchod</i></li>
-                     <li>Ruština pro obchodníky pro obory 63 – <i>Ekonomika a administrativa, 66 – Obchod, 23 – Strojírenství a strojírenská výrob</i></li>
-                  </ul>
-                  <p>Tyto vzdělávací programy jsou zpracovány specialisty na výuku cizích jazyků, rodilými mluvčími a odborníky z praxe - především z nadnárodních společností.</p>
-               </div>
+   </div>
+   <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModal"
+      aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+               <h4>Co je OPEN LEARNING?</h4>
+            </div>
+            <div class="modal-body">
+               <p>Koncept OPEN LEARNING umožňuje efektivnější učení a kontrolu průběhu učení. Průběžné hodnocení
+                  výsledků učení zobrazené v online pracovním sešitu okamžitě motivuje studenty k zodpovědnosti za
+                  výsledky učení.</p>
+               <p>Moderní online výukové prostředí OPEN LEARNING umožňuje studentům učit se kdykoli a kdekoli vlastním
+                  tempem, ověřovat si okamžitě výsledky cvičení a testů, vracet se libovolně zpět. Učitelé a lektoři
+                  mají v prostředí OPEN LEARNING přehled o aktivitách studentů, o výsledcích jejich cvičení a testů,
+                  mohou analyzovat nejčastější chyby a korigovat postupy výuky.</p>
+               <p>OPEN LEARNING zahrnuje tvorbu výukových materiálů, vývoj a provoz online prostředí, certifikační
+                  program v oblasti přípravy lektorů a učitelů odborných cizích jazyků včetně hodnocení výsledků
+                  vzdělávání.</p>
+               <p>Výukový soubor tvoří učebnice, online pracovní sešit a příručka pro lektory.</p>
             </div>
          </div>
       </div>
-      <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModal" aria-hidden="true">
-         <div class="modal-dialog aboutModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <h4>O nás</h4>
-               </div>
-               <div class="modal-body">
-                  <p>Ve spolupráci s firmami z různých oborů (Teva Czech Industries, Linaset, Prestar, KOMAS, FERRAM STROJÍRNA, Clarion Congress Hotel České Budějovice, Hotel Bellevue Český Krumlov, Hotel Budweis České Budějovice) vytváříme kvalitní materiály pro výuku odborných cizích jazyků jako např. Engineering Technology, Services in the Travel Trade.</p>
-                  <p>Spolupracujeme s firmami a středními školami, kam <b>dodáváme výukové materiály, školíme, motivujeme učitele a všemi silami je podporujeme</b>.</p>
-                  <p>S našimi učebnicemi a online pracovními sešity se podle odpovědí tisíců studentů zvyšuje jejich motivace a chuť učit se cizích jazyky. Obsah učebnic a lekcí byl vytvářen ve spolupráci s odborníky z praxe, rodilými mluvčími a zkušenými lektory. Výukové materiály využíváme ve výuce odborného cizího jazyka ve firmách a v kurzech akreditovaných MŠMT, kde připravujeme tandemy učitelů na výuku odborné angličtiny, němčiny a ruštiny s učiteli odborného předmětu. </p>
-                  <!-- <p><img src="img/map.png" alt="Map"></p> -->
-               </div>
+   </div>
+   <div class="modal fade" id="eduModal" tabindex="-1" role="dialog" aria-labelledby="eduModal" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+               <h4>Výuka s OPEN LEARNING</h4>
+            </div>
+            <div class="modal-body">
+               <p>OPEN LEARNING je vyučován výhradně certifikovanými lektory a certifikovanými učiteli. Doporučená doba
+                  ke zvládnutí deseti lekcí je 10-12 týdnů, což představuje 40 hodin výuky nebo online učení. Kontaktní
+                  výuka probíhá s certifikovaným učitelem nebo certifikovaným lektorem zpravidla 4 hodiny týdně. Je
+                  doplněna samostudiem s využitím online pracovního sešitu a individuálních konzultací.</p>
+               <p>OPEN LEARNING umožňuje integrovat výuku předmětu a cizího jazyka a vytvářet podmínky pro osvojení
+                  odborné terminologie předmětu v cizím i českém jazyce v souladu s Výnosem č. 9/2013 MŠMT pro vydávání
+                  rozhodnutí o povolení výuky některých předmětů v cizím jazyce pro základní a střední školy, který
+                  nabyl účinnosti dnem 1. ledna 2014, č.j.: MSMT-46350/2013.</p>
+               <p>Webová aplikace je navržena moderní technologií pro školy a vzdělávací centra od 1 do 100 počítačů
+                  zapojených v síti. Aplikace je velmi intuitivní a klade minimální nároky na školení uživatelů.</p>
             </div>
          </div>
       </div>
-      <div id="jsonModals"></div>
-      <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true" >
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-               </div>
-               <div class="modal-body" id="yt-player">
-                 <iframe style="width:100%; height: 400px;" src="https://www.youtube.com/embed/EJvo1LQfsgY?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-               </div>
+   </div>
+   <div class="modal fade" id="materialsModal" tabindex="-1" role="dialog" aria-labelledby="materialsModal"
+      aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+               <h4>Nabízíme výukové materiály pro odborný cizí jazyk</h4>
             </div>
-         </div>
-      </div>
-      <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModal" aria-hidden="true">
-         <div class="modal-dialog orderModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <h4>Objednávka služeb</h4>
-               </div>
-               <div class="modal-body">
-                  <div class="boxed-grey contact">
-                     <form id="order-form" action="https://docs.google.com/forms/d/17_PHrk40BOOucYIB0g5izUHbR0-DCJJX1-8s2nQ_9Rs/formResponse" method="POST" target="_blank">
-                        <div class="row">
-                           <div class="col-md-6">
-                              <div class="form-group">
-                                 <label >
-                                 Jméno</label>
-                                 <input type="text" class="form-control" id="entry_1182657935" name="entry.1182657935" placeholder="Vaše jméno" required="required" />
-                              </div>
-                              <div class="form-group">
-                                 <label >
-                                 Společnost </label>
-                                 <input type="text" class="form-control" name="entry.1983749742" id="entry_1983749742" placeholder="Jméno Vaší společnosti" required="required" />
-                              </div>
-                              <div class="form-group">
-                                 <label >
-                                 Telefon </label>
-                                 <input type="text" class="form-control" name="entry.1939664841" id="entry_1939664841" placeholder="Váš telefon" required="required" />
-                              </div>
-                              <div class="form-group">
-                                 <label >
-                                 Email </label>
-                                 <div class="input-group">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
-                                    </span>
-                                    <input type="email" class="form-control" name="entry.105059857" id="entry_105059857" placeholder="Váš Email" required="required" />
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="form-group">
-                                 <label >
-                                 Vaše objednávka</label>
-                                 <textarea name="entry.856736292" id="entry_856736292" class="form-control" rows="9" cols="25" required="required"
-                                    placeholder="Vaše objednávka"></textarea>
-                              </div>
-                              <input type="hidden" name="draftResponse" value="[,,&quot;-4814676553369089895&quot;]">
-                              <input type="hidden" name="pageHistory" value="0">
-                              <input type="hidden" name="fbzx" value="-4814676553369089895">
-                           </div>
-                           <button type="submit" class="btn btn-skin pull-right" id="btnOrder">
-                           Odeslat</button>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoModal" aria-hidden="true">
-         <div class="modal-dialog demoModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <h4>Přihlášení k demoverzi</h4>
-               </div>
-               <div class="modal-body">
-                  <div class="boxed-grey contact">
-                     <form id="demo-form" action="https://docs.google.com/forms/d/1Jhl3sRwa4rZo66oXYRq5zKCI9CTreqpqrHT-TzoN0dU/formResponse" method="POST" target="_blank">
-                        <div class="row">
-                           <div class="col-md-6">
-                              <div class="form-group">
-                                 <label>
-                                 Jméno</label>
-                                 <input type="text" class="form-control" name="entry.1608147205" id="entry_1608147205" placeholder="Vaše jméno" required="required" />
-                              </div>
-                              <div class="form-group">
-                                 <label >
-                                 Telefon </label>
-                                 <input type="text" class="form-control" name="entry.1595185448" id="entry_1595185448" placeholder="Váš telefon" required="required" />
-                              </div>
-                              <div class="form-group">
-                                 <label >
-                                 Email </label>
-                                 <div class="input-group">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
-                                    </span>
-                                    <input type="email" class="form-control" name="entry.1857752830" id="entry_1857752830" placeholder="Váš Email" required="required" />
-                                 </div>
-                              </div>
-                              <div class="form-group">
-                                 <label>
-                                 Mám zájem o: </label>   <br >
-                                 <input type="checkbox" name="entry.510680972" id="group_510680972_1" value="Angličtina pro cestovní ruch">Angličtina pro cestovní ruch<br>
-                                 <input type="checkbox" name="entry.510680972" id="group_510680972_2"  value="Němčina pro cestovní ruch">Němčina pro cestovní ruch<br>
-                                 <input type="checkbox" name="entry.510680972" id="group_510680972_3" value="Angličtina pro obchodníky">Angličtina pro obchodníky<br>
-                                 <input type="checkbox" name="entry.510680972" id="group_510680972_4" value="Angličtina pro strojaře">Angličtina pro strojaře<br>
-                                 <input type="checkbox" name="entry.510680972" id="group_510680972_5" value="Němčina pro obchodníky">Němčina pro obchodníky<br>
-                                 <input type="checkbox" name="entry.510680972" id="group_510680972_6" value="Ruština pro obchodníky">Ruština pro obchodníky<br>
-                                 <input type="checkbox" name="entry.510680972" id="group_510680972_7" value="Angličtina pro chemii">Angličtina pro chemii<br>
-                                 <input type="checkbox" name="entry.510680972" id="group_510680972_8" value="Němčina pro strojaře">Němčina pro strojaře<br>
-                              </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="form-group">
-                                 <label>
-                                 Vaše zpráva</label>
-                                 <textarea  name="entry.1089883849" id="entry_1089883849" class="form-control" rows="9" cols="25" required="required"
-                                    placeholder="Vaše zpráva"></textarea>
-                              </div>
-                              <input type="hidden" name="draftResponse" value="[,,&quot;742242035671460670&quot;]">
-                              <input type="hidden" name="pageHistory" value="0">
-                              <input type="hidden" name="fbzx" value="742242035671460670">
-                           </div>
-                           <button type="submit" class="btn btn-skin pull-right" id="btnDemo">
-                           Odeslat</button>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-         <div class="container">
-            <div class="navbar-header page-scroll">
-               <a href="https://openlearning.cz/login"><img class="mobileLogin" src="img/icons/login.png" alt="Rozcestník pro přihlášení"></a>
-               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-               <i class="fa fa-bars"></i>
-               </button>
-               <a class="navbar-brand" href="index.html">
-                  <img class="logo" src="img/logos/openagency-black.svg" alt="Open Agency s.r.o.">
-               </a>
-            </div>
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-               <ul class="nav navbar-nav">
-                  <li><a href="#first">O nás</a></li>
-                  <li><a href="#products" class="productsClick">Výukové materiály</a></li>
-                  <li><a href="#reference">Reference</a></li>
-                  <li><a href="#contact">Kontakt</a></li>
-                  <li><a href="pdf/cenik2021.pdf" target="_blank">Ceník</a></li>
-                  <li class="desktopLogin" title="Rozcestník pro přihlášení"><a href="https://openlearning.cz/login"><img src= "img/icons/login.png" alt="Rozcestník pro přihlášení" title="Rozcestník pro přihlášení" class="webLogin"></a></li>
+            <div class="modal-body">
+               <p>Výukové materiály pro žáky a učitele</p>
+               <ul>
+                  <li>Učebnice jsou především určeny učitelům a žákům středních odborných škol s mírně až středně
+                     pokročilou znalostí anglického, německého a ruského jazyka. <b>Prioritou učebnic je seznámit žáky
+                        v 10 lekcích s odbornou terminologií, a to zejména na základě definic jednotlivých procesů a
+                        pojmů</b>.</li>
+                  <li>K učebnici poskytujeme na <b>10 měsíců přístup k online pracovním sešitu</b>. Pracovní sešit
+                     obsahuje poslechy, videa a cvičení, která slouží žákům k zvládnutí a upevnění odborné slovní zásoby
+                     vlastním tempem v době výuky i mimo výuku ve škole.</li>
+                  <li>V online pracovním sešitě mohou žáci <b>podle svých potřeb</b> využívat výuková videa s frázemi,
+                     online testy a úkol ke každé z lekcí. Navíc mají žáci k dispozici odkazy na <b>autentické odborné
+                        texty a videa</b>, která se vztahují k probíraným odborným tématům.</li>
                </ul>
+               <p>Deset výhod výukových materiálů pro efektivní učení odborného cizího jazyka:</p>
+               <ul>
+                  <li>1. Obsah každého kurzu byl vytvářen <b>ve spolupráci s experty z praxe</b>.</li>
+                  <li>2. Učení se vlastním tempem <b>kdykoli a kdekoli</b>.</li>
+                  <li>3. Cesta kurzem je předem známá a <b>snadná</b>.</li>
+                  <li>4. <b>Více pokusů</b> ve cvičeních, testech a úkolech.</li>
+                  <li>5. Žáci <b>předem</b> vědí, co se stane, pokud v testu neuspějí.</li>
+                  <li>6. Možnost <b>online diskuse</b> s učitelem.</li>
+                  <li>7. Žáci <b>vědí</b>, jak bude kurz ukončen.</li>
+                  <li>8. Online pracovní sešit má <b>jednoduché a přehledné ovládání</b>.</li>
+                  <li>9. Každému uživateli je přiřazen <b>uživatelský účet</b>.</li>
+                  <li>10. <b>Učitel má přehled</b> o aktivitách žáků v jednotlivých lekcích a může poskytovat zpětnou
+                     vazbu každému žákovi.</li>
+               </ul>
+               <p><a href="#products"><b>Podívejte se na obsahu výukových materiálů</b></a></p>
             </div>
          </div>
-      </nav>
-      <section id="intro" class="intro">
-         <div class="slogan">
-            <h4>Pomáháme učitelům a žákům učit se odborný cizí jazyk. Vyučujeme odborný cizí jazyk ve firmách.</h4>
-            <h2><a href="#"  data-toggle="modal" data-target="#videoModal" class="introvideo">Video o nás</a></h2>
+      </div>
+   </div>
+   <div class="modal fade" id="teachersModal" tabindex="-1" role="dialog" aria-labelledby="teachersModal"
+      aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+               <h4>Připravujeme učitele v tandemech</h4>
+            </div>
+            <div class="modal-body">
+               <p>Jazykové kurzy pro učitele akreditované MŠMT, kde  spolupracuje jazykář s učitelem odborného předmětu
+               </p>
+               <p>Výuka v tandemu funguje tak, že například v lekci o svařování <b>spolupracuje učitel strojírenské
+                     technologie s učitelem angličtiny.</b> Učitel strojírenské technologie vysvětlí jazykáři postup
+                  svařování a učitel angličtiny pomůže odborníkovi komunikovat o svařování v cizím jazyce. <b>Tímto se
+                     učitel odborník i jazykář zlepší v odborné angličtině.</b>
+               </p>
+               <p>
+                  Jazykové kurzy pro učitele jsou akreditované MŠMT v rámci DVPP a mohou být realizovány <b>přímo u vás
+                     ve škole</b>. Minimální počet učitelů v kurzu je 6, maximální 8. V ceně kurzu je 16 vyučovacích
+                  hodin se zkušeným lektorem, učebnice, online pracovní sešit a příručka pro lektora. Učitelé obdrží
+                  <b>certifikát</b> z kurzu DVPP.
+               </p>
+               <p>
+                  V jazykových kurzech učitelé <b>dostanou návod</b>, jak vyučovat a učit se odborný cizí jazyk,
+                  využívat efektivně online technologie ve výuce. Učitelé se v kurzu prakticky seznámí s obsahem deseti
+                  lekcí, metodami, aktivitami a náměty pro organizaci výuky a učení.
+               </p>
+               <h4 class="cntr">Jak probíhá následná výuka odborného jazyka ve vaší střední škole?</h4>
+               <p>Tandemy učitelů, kteří spolu absolvovali jazykový kurz, začnou výuku žáků s našimi materiály v menších
+                  skupinách žáků v rozsahu 40 vyučovacích hodin.</p>
+               <h4 class="cntr">Máme dlouholeté zkušenosti a výborné reference</h4>
+               <p>Od roku 2015 jsme vyškolili 517 učitelů středních odborných škol a gymnázií v odborném cizím jazyce.
+               </p>
+               <p>„Spolupráci s OPEN AGENCY jsem velmi uvítal jako další příležitost ke zlepšení jazykové kompetence
+                  žáků i učitelů. Hospitační hodiny, kde učitelé užívali metodu CLIL, byly velmi příjemné a všemi směry
+                  je zřejmý posun k vyšší kvalitě odborného i jazykového vzdělávání s využitím týmové práce učitelů.
+                  Učitelé angličtiny již vědí, o čem je odbornost, které se mladí strojaři učí, učitelé technických
+                  předmětů se zdokonalují ve své angličtině a ztrácejí ostych před svými žáky, kteří se vyjadřují
+                  s velkou spokojeností.“<br><br>Mgr. Martin Tobiáš – ředitel SPŠ, OA a JŠ, Frýdek-Místek</p>
+            </div>
          </div>
-         <div class="page-scroll">
-            <a href="#" data-toggle="modal" data-target="#videoModal" class="btn btn-circle" style="padding: 5px 20px;"><i class="fa fa-play animated"></i></a>
+      </div>
+   </div>
+   <div class="modal fade" id="teachingModal" tabindex="-1" role="dialog" aria-labelledby="teachingModal"
+      aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+               <h4>Vyučujeme ve firmách</h4>
+            </div>
+            <div class="modal-body">
+               <p>Skupinová a individuální výuka odborné angličtiny, němčiny a ruštiny</p>
+               <p>Výuka ve firmách má v OPEN AGENCY dlouholetou tradici a <b>výborné reference od podniků</b> ve
+                  strojírenství, elektrotechnice, výrobě plastů, chemickém průmyslu, cestovním ruchu, marketingu a
+                  mezinárodním obchodě. <b>Realizujeme skupinovou i individuální výuku</b> odborné angličtiny, němčiny a
+                  ruštiny. Kurzy připravujeme <b>na míru</b> na základě důkladné analýzy přání a cílů klienta.
+                  Přednostně dbáme na kvalitu výuky a garantujeme kvalifikované české i zahraniční učitele s praxí.
+                  Kurzy se uskutečňují prezenční formou a konají se přímo <b>u vás v podniku</b>.</p>
+
+               <p>Klademe důraz na <b>propojení obsahu výuky s praxí</b> a individuální potřeby studentů. Úzce
+                  spolupracujeme s odborníky z podniků a rodilými mluvčími z oboru. V kurzech ve firmách se soustředíme
+                  na rozvoj všech jazykových dovedností, odbornou slovní zásobu a především schopnost tyto nabyté
+                  vědomosti <b>v praxi používat</b>.</p>
+               <p><a href="#reference"><b>Podívejte se na reference firem</b></a></p>
+            </div>
          </div>
-      </section>
-      <section id="first" class="home-section text-center bg-white">
-         <div class="heading-about">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-8 col-lg-offset-2">
-                     <div class="wow bounceInDown" data-wow-delay="0.4s">
-                        <div class="section-heading">
-                           <h2>Náš cíl</h2>
+      </div>
+   </div>
+   <div class="modal fade" id="schoolModal" tabindex="-1" role="dialog" aria-labelledby="schoolModal"
+      aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+               <h4>OPEN LEARNING ve školách</h4>
+            </div>
+            <div class="modal-body">
+               <ul>
+                  <li>Angličtina pro chemiky pro obor 28 – <i>Technická chemie a chemie silikátů</i></li>
+                  <li>Angličtina pro strojaře pro obor 23 – <i>Strojírenství a strojírenská výroba</i></li>
+                  <li>Angličtina pro obchodníky pro obory 63 – <i>Ekonomika a administrativa, 66 – Obchod, 23 –
+                        Strojírenství a strojírenská výroba</i></li>
+                  <li>Angličtina pro cestovní ruch pro obory 65 – <i>Gastronomie, hotelnictví, turismus, 63 – Ekonomika
+                        a administrativa, 66 – Obchod</i></li>
+                  <li>Němčina pro strojaře pro obor 23 – <i>Strojírenství a strojírenská výroba</i></li>
+                  <li>Němčina pro obchodníky pro obory 63 – <i>Ekonomika a administrativa, 66 – Obchod, 23 –
+                        Strojírenství a strojírenská výroba</i></li>
+                  <li>Němčina pro cestovní ruch pro obory 65 – <i>Gastronomie, hotelnictví, turismus, 63 – Ekonomika a
+                        administrativa, 66 – Obchod</i></li>
+                  <li>Ruština pro obchodníky pro obory 63 – <i>Ekonomika a administrativa, 66 – Obchod, 23 –
+                        Strojírenství a strojírenská výrob</i></li>
+               </ul>
+               <p>Tyto vzdělávací programy jsou zpracovány specialisty na výuku cizích jazyků, rodilými mluvčími a
+                  odborníky z praxe - především z nadnárodních společností.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModal" aria-hidden="true">
+      <div class="modal-dialog aboutModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+               <h4>O nás</h4>
+            </div>
+            <div class="modal-body">
+               <p>Ve spolupráci s firmami z různých oborů (Teva Czech Industries, Linaset, Prestar, KOMAS, FERRAM
+                  STROJÍRNA, Clarion Congress Hotel České Budějovice, Hotel Bellevue Český Krumlov, Hotel Budweis České
+                  Budějovice) vytváříme kvalitní materiály pro výuku odborných cizích jazyků jako např. Engineering
+                  Technology, Services in the Travel Trade.</p>
+               <p>Spolupracujeme s firmami a středními školami, kam <b>dodáváme výukové materiály, školíme, motivujeme
+                     učitele a všemi silami je podporujeme</b>.</p>
+               <p>S našimi učebnicemi a online pracovními sešity se podle odpovědí tisíců studentů zvyšuje jejich
+                  motivace a chuť učit se cizích jazyky. Obsah učebnic a lekcí byl vytvářen ve spolupráci s odborníky
+                  z praxe, rodilými mluvčími a zkušenými lektory. Výukové materiály využíváme ve výuce odborného cizího
+                  jazyka ve firmách a v kurzech akreditovaných MŠMT, kde připravujeme tandemy učitelů na výuku odborné
+                  angličtiny, němčiny a ruštiny s učiteli odborného předmětu. </p>
+               <!-- <p><img src="img/map.png" alt="Map"></p> -->
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="jsonModals"></div>
+   <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body" id="yt-player">
+               <iframe style="width:100%; height: 400px;" src="https://www.youtube.com/embed/EJvo1LQfsgY?enablejsapi=1"
+                  frameborder="0" allowfullscreen></iframe>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModal" aria-hidden="true">
+      <div class="modal-dialog orderModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+               <h4>Objednávka služeb</h4>
+            </div>
+            <div class="modal-body">
+               <div class="boxed-grey contact">
+                  <form id="order-form"
+                     action="https://docs.google.com/forms/d/17_PHrk40BOOucYIB0g5izUHbR0-DCJJX1-8s2nQ_9Rs/formResponse"
+                     method="POST" target="_blank">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="form-group">
+                              <label>
+                                 Jméno</label>
+                              <input type="text" class="form-control" id="entry_1182657935" name="entry.1182657935"
+                                 placeholder="Vaše jméno" required="required" />
+                           </div>
+                           <div class="form-group">
+                              <label>
+                                 Společnost </label>
+                              <input type="text" class="form-control" name="entry.1983749742" id="entry_1983749742"
+                                 placeholder="Jméno Vaší společnosti" required="required" />
+                           </div>
+                           <div class="form-group">
+                              <label>
+                                 Telefon </label>
+                              <input type="text" class="form-control" name="entry.1939664841" id="entry_1939664841"
+                                 placeholder="Váš telefon" required="required" />
+                           </div>
+                           <div class="form-group">
+                              <label>
+                                 Email </label>
+                              <div class="input-group">
+                                 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                 </span>
+                                 <input type="email" class="form-control" name="entry.105059857" id="entry_105059857"
+                                    placeholder="Váš Email" required="required" />
+                              </div>
+                           </div>
                         </div>
+                        <div class="col-md-6">
+                           <div class="form-group">
+                              <label>
+                                 Vaše objednávka</label>
+                              <textarea name="entry.856736292" id="entry_856736292" class="form-control" rows="9"
+                                 cols="25" required="required" placeholder="Vaše objednávka"></textarea>
+                           </div>
+                           <input type="hidden" name="draftResponse" value="[,,&quot;-4814676553369089895&quot;]">
+                           <input type="hidden" name="pageHistory" value="0">
+                           <input type="hidden" name="fbzx" value="-4814676553369089895">
+                        </div>
+                        <button type="submit" class="btn btn-skin pull-right" id="btnOrder">
+                           Odeslat</button>
                      </div>
-                  </div>
+                  </form>
                </div>
             </div>
          </div>
+      </div>
+   </div>
+   <div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoModal" aria-hidden="true">
+      <div class="modal-dialog demoModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+               <h4>Přihlášení k demoverzi</h4>
+            </div>
+            <div class="modal-body">
+               <div class="boxed-grey contact">
+                  <form id="demo-form"
+                     action="https://docs.google.com/forms/d/1Jhl3sRwa4rZo66oXYRq5zKCI9CTreqpqrHT-TzoN0dU/formResponse"
+                     method="POST" target="_blank">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="form-group">
+                              <label>
+                                 Jméno</label>
+                              <input type="text" class="form-control" name="entry.1608147205" id="entry_1608147205"
+                                 placeholder="Vaše jméno" required="required" />
+                           </div>
+                           <div class="form-group">
+                              <label>
+                                 Telefon </label>
+                              <input type="text" class="form-control" name="entry.1595185448" id="entry_1595185448"
+                                 placeholder="Váš telefon" required="required" />
+                           </div>
+                           <div class="form-group">
+                              <label>
+                                 Email </label>
+                              <div class="input-group">
+                                 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                 </span>
+                                 <input type="email" class="form-control" name="entry.1857752830" id="entry_1857752830"
+                                    placeholder="Váš Email" required="required" />
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label>
+                                 Mám zájem o: </label> <br>
+                              <input type="checkbox" name="entry.510680972" id="group_510680972_1"
+                                 value="Angličtina pro cestovní ruch">Angličtina pro cestovní ruch<br>
+                              <input type="checkbox" name="entry.510680972" id="group_510680972_2"
+                                 value="Němčina pro cestovní ruch">Němčina pro cestovní ruch<br>
+                              <input type="checkbox" name="entry.510680972" id="group_510680972_3"
+                                 value="Angličtina pro obchodníky">Angličtina pro obchodníky<br>
+                              <input type="checkbox" name="entry.510680972" id="group_510680972_4"
+                                 value="Angličtina pro strojaře">Angličtina pro strojaře<br>
+                              <input type="checkbox" name="entry.510680972" id="group_510680972_5"
+                                 value="Němčina pro obchodníky">Němčina pro obchodníky<br>
+                              <input type="checkbox" name="entry.510680972" id="group_510680972_6"
+                                 value="Ruština pro obchodníky">Ruština pro obchodníky<br>
+                              <input type="checkbox" name="entry.510680972" id="group_510680972_7"
+                                 value="Angličtina pro chemii">Angličtina pro chemii<br>
+                              <input type="checkbox" name="entry.510680972" id="group_510680972_8"
+                                 value="Němčina pro strojaře">Němčina pro strojaře<br>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="form-group">
+                              <label>
+                                 Vaše zpráva</label>
+                              <textarea name="entry.1089883849" id="entry_1089883849" class="form-control" rows="9"
+                                 cols="25" required="required" placeholder="Vaše zpráva"></textarea>
+                           </div>
+                           <input type="hidden" name="draftResponse" value="[,,&quot;742242035671460670&quot;]">
+                           <input type="hidden" name="pageHistory" value="0">
+                           <input type="hidden" name="fbzx" value="742242035671460670">
+                        </div>
+                        <button type="submit" class="btn btn-skin pull-right" id="btnDemo">
+                           Odeslat</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="container">
+         <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+               <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="index.html">
+               <img class="logo" src="img/logos/openagency-black.svg" alt="Open Agency s.r.o.">
+            </a>
+         </div>
+         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+               <li><a href="#first">O nás</a></li>
+               <li><a href="#products" class="productsClick">Výukové materiály</a></li>
+               <li><a href="#reference">Reference</a></li>
+               <li><a href="#contact">Kontakt</a></li>
+               <li><a href="pdf/cenik2021.pdf" target="_blank">Ceník</a></li>
+               <li><a href="https://openlearning.cz/login" class="blue-text">Přihlášení</a></li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+   <section id="intro" class="intro">
+      <div class="slogan container">
+         <div class="text col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <h4>Pomáháme učitelům a žákům<br><span class="blue-text">učit se odborný cizí jazyk</span></h4>
+         </div>
+         <div class="video col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <a href="#" data-toggle="modal" data-target="#videoModal" class="introvideo"
+               title="Přehrát video"><span></span></a>
+         </div>
+      </div>
+   </section>
+   <section id="first" class="home-section text-center bg-white">
+      <div class="heading-about">
          <div class="container">
             <div class="row">
-               <div class="col-lg-2 col-lg-offset-5 sentencer">
-                  <hr class="marginbot-50">
-               </div>
-            </div>
-            <div class="row">
-               <p class="sentence">Naším cílem je, aby se žáci ve školách učili odborný cizí jazyk efektivně a uměli používat cizí
-				jazyky v každodenní profesní komunikaci. <b>Mají to přeci být odborníci!</b><br><br>Pomáháme učitelům, aby jejich žáky učení bavilo. Pro učitele a žáky vytváříme odborné
-				texty, poslechy, výuková videa a online cvičení k opakování. Umožňujeme učitelům a žákům získat kvalitní zpětnou vazbu o výsledcích učení. Pro učitele cizích jazyků, odborných
-				předmětů a firmy máme kurzy odborného cizího jazyka.</p>
-               <p><a class="btn btn-lg btn-primary" href="#" data-toggle="modal" data-target="#aboutModal" role="button">Více o nás</a></p>
-            </div>
-         </div>
-      </section>
-      <section id="service" class="home-section text-center bg-gray">
-         <div class="heading-about">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-8 col-lg-offset-2">
-                     <div class="wow bounceInDown" data-wow-delay="0.4s">
-                        <div class="section-heading">
-                           <h2>S čím Vám můžeme pomoci?</h2>
-                        </div>
+               <div class="col-lg-8 col-lg-offset-2">
+                  <div class="wow bounceInDown" data-wow-delay="0.4s">
+                     <div class="section-heading">
+                        <h2>Náš cíl</h2>
                      </div>
                   </div>
                </div>
             </div>
          </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-2 col-lg-offset-5 sentencer">
+               <hr class="marginbot-50">
+            </div>
+         </div>
+         <div class="row">
+            <p class="sentence">Naším cílem je, aby se žáci ve školách učili odborný cizí jazyk efektivně a uměli
+               používat cizí
+               jazyky v každodenní profesní komunikaci. <b>Mají to přeci být odborníci!</b><br><br>Pomáháme učitelům,
+               aby jejich žáky učení bavilo. Pro učitele a žáky vytváříme odborné
+               texty, poslechy, výuková videa a online cvičení k opakování. Umožňujeme učitelům a žákům získat kvalitní
+               zpětnou vazbu o výsledcích učení. Pro učitele cizích jazyků, odborných
+               předmětů a firmy máme kurzy odborného cizího jazyka.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" data-toggle="modal" data-target="#aboutModal"
+                  role="button">Více o nás</a></p>
+         </div>
+      </div>
+   </section>
+   <section id="service" class="home-section text-center bg-gray">
+      <div class="heading-about">
          <div class="container">
             <div class="row">
-               <div class="col-lg-2 col-lg-offset-5 sentencer">
-                  <hr class="marginbot-50">
+               <div class="col-lg-8 col-lg-offset-2">
+                  <div class="wow bounceInDown" data-wow-delay="0.4s">
+                     <div class="section-heading">
+                        <h2>S čím Vám můžeme pomoci?</h2>
+                     </div>
+                  </div>
                </div>
             </div>
-            <div class="row">
-               <div class="col-oz-3 col-sm-3 col-md-4">
-                  <div class="wow fadeInLeft" data-wow-delay="0.2s">
-                     <div class="service-box">
-                        <div class="service-icon">
-                           <img src="img/icons/service-icon-1.png" alt="Přehlednost" class="prior"/>
-                        </div>
-                        <div class="service-desc">
-                           <h5>Nabízíme výukové materiály</h5>
-                           <p>Výukové materiály pro učitele a žáky připravující se na profese v průmyslu a službách
-                           </p>
-                        </div>
-                        <div class="absButton">
-                           <p><a href="#" class="materialsButton">Obsah výukových materiálů <span class="glyphicon glyphicon-chevron-right"></span></a></p>
-                           <p><a class="btn btn-lg btn-primary " href="#" data-toggle="modal" data-target="#materialsModal" role="button">Zobrazit více</a></p>
-                        </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-2 col-lg-offset-5 sentencer">
+               <hr class="marginbot-50">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-oz-3 col-sm-3 col-md-4">
+               <div class="wow fadeInLeft" data-wow-delay="0.2s">
+                  <div class="service-box">
+                     <div class="service-icon">
+                        <img src="img/icons/service-icon-1.png" alt="Přehlednost" class="prior" />
+                     </div>
+                     <div class="service-desc">
+                        <h5>Nabízíme výukové materiály</h5>
+                        <p>Výukové materiály pro učitele a žáky připravující se na profese v průmyslu a službách
+                        </p>
+                     </div>
+                     <div class="absButton">
+                        <p><a href="#" class="materialsButton">Obsah výukových materiálů <span
+                                 class="glyphicon glyphicon-chevron-right"></span></a></p>
+                        <p><a class="btn btn-lg btn-primary " href="#" data-toggle="modal" data-target="#materialsModal"
+                              role="button">Zobrazit více</a></p>
                      </div>
                   </div>
                </div>
-               <div class="col-oz-3 col-sm-3 col-md-4">
-                  <div class="wow fadeInLeft" data-wow-delay="0.2s">
-                     <div class="service-box">
-                        <div class="service-icon">
-                           <img src="img/icons/service-icon-2.png" alt="Certifikace Lektorů" class="prior"/>
-                        </div>
-                        <div class="service-desc">
-                           <h5>Připravujeme učitele v tandemech</h5>
-                           <p>Jazykové kurzy pro učitele akreditované MŠMT, kde  spolupracuje jazykář s učitelem odborného předmětu
-                           </p>
-                        </div>
-                        <div class="absButton">
-                           <p><a href="#" class="teachersButton">Obsah výukových materiálů <span class="glyphicon glyphicon-chevron-right"></span></a></p>
-                           <p><a class="btn btn-lg btn-primary" href="#" data-toggle="modal" data-target="#teachersModal" role="button">Zobrazit více</a></p>
-                        </div>
+            </div>
+            <div class="col-oz-3 col-sm-3 col-md-4">
+               <div class="wow fadeInLeft" data-wow-delay="0.2s">
+                  <div class="service-box">
+                     <div class="service-icon">
+                        <img src="img/icons/service-icon-2.png" alt="Certifikace Lektorů" class="prior" />
+                     </div>
+                     <div class="service-desc">
+                        <h5>Připravujeme učitele v tandemech</h5>
+                        <p>Jazykové kurzy pro učitele akreditované MŠMT, kde spolupracuje jazykář s učitelem odborného
+                           předmětu
+                        </p>
+                     </div>
+                     <div class="absButton">
+                        <p><a href="#" class="teachersButton">Obsah výukových materiálů <span
+                                 class="glyphicon glyphicon-chevron-right"></span></a></p>
+                        <p><a class="btn btn-lg btn-primary" href="#" data-toggle="modal" data-target="#teachersModal"
+                              role="button">Zobrazit více</a></p>
                      </div>
                   </div>
                </div>
-               <div class="col-oz-3 col-sm-3 col-md-4 zaba">
-                  <div class="wow fadeInLeft" data-wow-delay="0.2s">
-                     <div class="service-box">
-                        <div class="service-icon">
-                           <img src="img/icons/service-icon-3.png" alt="Moderní výuka" class="prior"/>
-                        </div>
-                        <div class="service-desc">
-                           <h5>Vyučujeme ve firmách</h5>
-                           <p>Skupinová a individuální výuka odborné angličtiny, němčiny a ruštiny
-                           </p>
-                        </div>
-                        <div class="absButton">
-                           <p><a href="#" class="teachersButton">Obsah výukových materiálů <span class="glyphicon glyphicon-chevron-right"></span></a></p>
-                           <p><a class="btn btn-lg btn-primary" href="#" data-toggle="modal" data-target="#teachingModal" role="button">Zobrazit více</a></p>
-                        </div>
+            </div>
+            <div class="col-oz-3 col-sm-3 col-md-4 zaba">
+               <div class="wow fadeInLeft" data-wow-delay="0.2s">
+                  <div class="service-box">
+                     <div class="service-icon">
+                        <img src="img/icons/service-icon-3.png" alt="Moderní výuka" class="prior" />
+                     </div>
+                     <div class="service-desc">
+                        <h5>Vyučujeme ve firmách</h5>
+                        <p>Skupinová a individuální výuka odborné angličtiny, němčiny a ruštiny
+                        </p>
+                     </div>
+                     <div class="absButton">
+                        <p><a href="#" class="teachersButton">Obsah výukových materiálů <span
+                                 class="glyphicon glyphicon-chevron-right"></span></a></p>
+                        <p><a class="btn btn-lg btn-primary" href="#" data-toggle="modal" data-target="#teachingModal"
+                              role="button">Zobrazit více</a></p>
                      </div>
                   </div>
                </div>
-               <!-- <div class="col-oz-3 col-sm-3 col-md-3">
+            </div>
+            <!-- <div class="col-oz-3 col-sm-3 col-md-3">
                   <div class="wow fadeInLeft" data-wow-delay="0.2s">
                      <div class="service-box">
                         <div class="service-icon">
@@ -513,533 +626,582 @@
                      </div>
                   </div>
                   </div> -->
-            </div>
          </div>
-      </section>
-      <section id="carousel-intro">
-         <div id="intro-carousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-               <li data-target="#intro-carousel" data-slide-to="0" class="active"></li>
-               <li data-target="#intro-carousel" data-slide-to="1"></li>
-               <li data-target="#intro-carousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-               <div class="item active">
-                  <div class="container">
-                     <div class="col-lg-8 col-lg-offset-2 left-row">
-                        <div class="section-heading carousel-practice">
-                           <h2 class="blue-h2 nomarg-h2">Provázanost s praxí</h2>
-                           <h2>Kurzy vhodné pro zvýšení kvalifikace</h2>
-                           <p>Ústní a písemné úkoly vycházející z reálných potřeb praxe
-                              <br />
-                              Videonahrávky vytvořené v prostředí podniků v každé lekci
-                           </p>
-                        </div>
-                        <div class="worker">
-                           <a href="#"  data-toggle="modal" data-target="#videoModal" role="button"><img src="img/works/play.png" alt="přehrát video" class="play"></a>
-                        </div>
+      </div>
+   </section>
+   <section id="carousel-intro">
+      <div id="intro-carousel" class="carousel slide" data-ride="carousel">
+         <ol class="carousel-indicators">
+            <li data-target="#intro-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#intro-carousel" data-slide-to="1"></li>
+            <li data-target="#intro-carousel" data-slide-to="2"></li>
+         </ol>
+         <div class="carousel-inner">
+            <div class="item active">
+               <div class="container">
+                  <div class="col-lg-8 col-lg-offset-2 left-row">
+                     <div class="section-heading carousel-practice">
+                        <h2 class="blue-h2 nomarg-h2">Provázanost s praxí</h2>
+                        <h2>Kurzy vhodné pro zvýšení kvalifikace</h2>
+                        <p>Ústní a písemné úkoly vycházející z reálných potřeb praxe
+                           <br />
+                           Videonahrávky vytvořené v prostředí podniků v každé lekci
+                        </p>
                      </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container">
-                     <div class="col-lg-8 col-lg-offset-2 left-row">
-                        <img class="notepad" src="img/works/online-pracovni-sesit.png" alt="Online pracovní sešit">
-                        <div class="section-heading carousel-practice">
-                           <h2 class="blue-h2 nomarg-h2">Online pracovní sešit</h2>
-                           <h2>poskytuje zpětnou vazbu</h2>
-                           <p>Okamžité vyhodnocení cvičení a testů v online pracovním sešitě
-                              <br />
-                              Přehlednost a dostupnost výsledků pro studenta i jeho lektora
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container">
-                     <div class="col-lg-8 col-lg-offset-2 left-row">
-                        <div class="section-heading carousel-practice">
-                           <h2 class="nomarg-h2">Učebnice pro </h2>
-                           <h2 class="nomarg-h2">studenty. <span class="blue-h2">PŘEHLEDNOST. </span></h2>
-                           <h2 class="blue-h2">ODBORNOST.</h2>
-                           <p>Systematicky strukturované lekce v učebnici
-                              <br />
-                              Třicet odborných termínů v každé lekci <br />
-                              Výukové materiály s odbornými texty vytvořené ve spolupráci <br />s odborníky a prověřené rodilými mluvčími
-                           </p>
-                        </div>
-                        <div class="students">
-                        </div>
+                     <div class="worker">
+                        <a href="#" data-toggle="modal" data-target="#videoModal" role="button"><img
+                              src="img/works/play.png" alt="přehrát video" class="play"></a>
                      </div>
                   </div>
                </div>
             </div>
-            <a class="left carousel-control" href="#intro-carousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-            <a class="right carousel-control" href="#intro-carousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-         </div>
-      </section>
-      <section id="products" class="home-section text-center">
-         <div class="heading-about">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-8 col-lg-offset-2">
-                     <div class="wow bounceInDown" data-wow-delay="0.4s">
-                        <div class="section-heading product-heading">
-                           <h2>Obsah výukových materiálů</h2>
-                           <ul id="filterOptions">
-                              <li id="all" class="active"><a href="#" class="all">Všechny výukové materiály a kurzy</a> <span class="mark">|</span></li>
-                              <li id="materialy"><a href="#" class="materialy">Výukové materiály</a> <span class="mark">|</span></li>
-                              <li id="ucitele"><a href="#" class="ucitele" >Certifikace učitelů a lektorů</a><span class="mark">|</span></li>
-                              <li id="vyuka"><a href="#" class="vyuka">Moderní výuka</a>
-                           </ul>
-                        </div>
+            <div class="item">
+               <div class="container">
+                  <div class="col-lg-8 col-lg-offset-2 left-row">
+                     <img class="notepad" src="img/works/online-pracovni-sesit.png" alt="Online pracovní sešit">
+                     <div class="section-heading carousel-practice">
+                        <h2 class="blue-h2 nomarg-h2">Online pracovní sešit</h2>
+                        <h2>poskytuje zpětnou vazbu</h2>
+                        <p>Okamžité vyhodnocení cvičení a testů v online pracovním sešitě
+                           <br />
+                           Přehlednost a dostupnost výsledků pro studenta i jeho lektora
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="container">
+                  <div class="col-lg-8 col-lg-offset-2 left-row">
+                     <div class="section-heading carousel-practice">
+                        <h2 class="nomarg-h2">Učebnice pro </h2>
+                        <h2 class="nomarg-h2">studenty. <span class="blue-h2">PŘEHLEDNOST. </span></h2>
+                        <h2 class="blue-h2">ODBORNOST.</h2>
+                        <p>Systematicky strukturované lekce v učebnici
+                           <br />
+                           Třicet odborných termínů v každé lekci <br />
+                           Výukové materiály s odbornými texty vytvořené ve spolupráci <br />s odborníky a prověřené
+                           rodilými mluvčími
+                        </p>
+                     </div>
+                     <div class="students">
                      </div>
                   </div>
                </div>
             </div>
          </div>
+         <a class="left carousel-control" href="#intro-carousel" role="button" data-slide="prev"><span
+               class="glyphicon glyphicon-chevron-left"></span></a>
+         <a class="right carousel-control" href="#intro-carousel" role="button" data-slide="next"><span
+               class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
+   </section>
+   <section id="products" class="home-section text-center">
+      <div class="heading-about">
          <div class="container">
             <div class="row">
-               <div class="col-lg-2 col-lg-offset-5">
-                  <hr class="marginbot-50">
+               <div class="col-lg-8 col-lg-offset-2">
+                  <div class="wow bounceInDown" data-wow-delay="0.4s">
+                     <div class="section-heading product-heading">
+                        <h2>Obsah výukových materiálů</h2>
+                        <ul id="filterOptions">
+                           <li id="all" class="active"><a href="#" class="all">Všechny výukové materiály a kurzy</a>
+                              <span class="mark">|</span></li>
+                           <li id="materialy"><a href="#" class="materialy">Výukové materiály</a> <span
+                                 class="mark">|</span></li>
+                           <li id="ucitele"><a href="#" class="ucitele">Certifikace učitelů a lektorů</a><span
+                                 class="mark">|</span></li>
+                           <li id="vyuka"><a href="#" class="vyuka">Moderní výuka</a>
+                        </ul>
+                     </div>
+                  </div>
                </div>
             </div>
-            <div class="productsrow">
-               <div id="holder">
-               </div>
-              <div id="showers">
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-2 col-lg-offset-5">
+               <hr class="marginbot-50">
+            </div>
+         </div>
+         <div class="productsrow">
+            <div id="holder">
+            </div>
+            <div id="showers">
                <div id="showAll">
                   <a href="#">Zobrazit více</a>
                </div>
                <div id="hideAll">
                   <a class="active" href="#">Zobrazit méně</a>
                </div>
-               </div>
             </div>
-            <div class="sidebar">
-               <div class="wow bounceInUp" data-wow-delay="0.5s">
-                  <div class="boxed-grey demo">
-                     <div class="inner">
-                        <a class="btn btn-lg btn-primary demo-btn" href="#"  data-toggle="modal" data-target="#demoModal" role="button">Vyzkoušet lekci zdarma</a>
-                     </div>
+         </div>
+         <div class="sidebar">
+            <div class="wow bounceInUp" data-wow-delay="0.5s">
+               <div class="boxed-grey demo">
+                  <div class="inner">
+                     <a class="btn btn-lg btn-primary demo-btn" href="#" data-toggle="modal" data-target="#demoModal"
+                        role="button">Vyzkoušet lekci zdarma</a>
                   </div>
                </div>
-               <div class="wow bounceInUp" data-wow-delay="0.7s">
-                  <div class="boxed-grey twitter">
-                     <div class="inner">
-                        <a class="twitter-timeline" href="https://twitter.com/openagency_cz" data-widget-id="455053168536064000">Tweets by @openagency_cz</a>
-                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                     </div>
+            </div>
+            <div class="wow bounceInUp" data-wow-delay="0.7s">
+               <div class="boxed-grey twitter">
+                  <div class="inner">
+                     <a class="twitter-timeline" href="https://twitter.com/openagency_cz"
+                        data-widget-id="455053168536064000">Tweets by @openagency_cz</a>
+                     <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
                   </div>
                </div>
             </div>
          </div>
-      </section>
-      <section id="reference">
-         <div id="testimonyCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-               <li data-target="#testimonyCarousel" data-slide-to="0" class="active"></li>
-               <li data-target="#testimonyCarousel" data-slide-to="1" ></li>
-               <li data-target="#testimonyCarousel" data-slide-to="2"></li>
-               <li data-target="#testimonyCarousel" data-slide-to="3"></li>
-               <li data-target="#testimonyCarousel" data-slide-to="4"></li>
-               <li data-target="#testimonyCarousel" data-slide-to="5"></li>
-               <li data-target="#testimonyCarousel" data-slide-to="6"></li>
-               <li data-target="#testimonyCarousel" data-slide-to="7"></li>
-               <li data-target="#testimonyCarousel" data-slide-to="8"></li>
-               <li data-target="#testimonyCarousel" data-slide-to="9"></li>
-               <li data-target="#testimonyCarousel" data-slide-to="10"></li>
-               <li data-target="#testimonyCarousel" data-slide-to="11"></li>
-               <li data-target="#testimonyCarousel" data-slide-to="12"></li>
-               <li data-target="#testimonyCarousel" data-slide-to="13"></li>
-               <li data-target="#testimonyCarousel" data-slide-to="14"></li>
-            </ol>
-            <div class="carousel-inner">
-               <div class="item active">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>Ing. Josef Smutek</h2>
-                        <p class="work-pos">Jednatel, Prestar, s.r.o.</p>
-                        <p class="quote">„Ve firmě jednám s německými zákazníky denně, přesto – nebo právě proto – jsem využil možnosti navštěvovat kurz Maschinentechnologie. Vynechal jsem jenom jednu hodinu.“</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>Ing. Marek Breznen</h2>
-                        <p class="work-pos">Hlavní Technolog TAPI CZ, Teva Czech Industries s.r.o.</p>
-                        <p class="quote">„Výukové materiály jsou zpracovány moderní formou blízkou současnému mladému člověku, který již není zvyklý číst z knížek a skript a pro kterého internetová výuka a interaktivní online komunikace je tak přirozená, jako jídlo a pití.“</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>Ing. Petra Vehovská</h2>
-                        <p class="work-pos">Ekonomka, STROJÍRNA Vehovský s.r.o.</p>
-                        <p class="quote">„Absolvovala jsem kurz angličtiny Obchod a marketing a z výuky OPEN LEARNING jsem nadšená. Poprvé jsem v kurzu zažila naprosté sepětí s praxí. Lekce v podstatě kopírují reálné situace ve firmě. Díky možnosti učit se lekce souběžně v kurzu s lektorkou i doma online, bylo pro mě studium zábavné. Konečně jsem se při výuce jazyka výrazně posunula. Velmi oceňuji práci celého Vašeho týmu. Pokud chcete zkusit výuku „trošku jinak“, neváhejte! Mohu to jen vřele doporučit.“</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>Ing. Antonín Krejčí</h2>
-                        <p class="work-pos">Náměstek řízení jakosti, KOMAS, spol. s r.o.</p>
-                        <p class="quote">„V kurzu odborné němčiny Strojírenská technologie jsem ocenil kvalitu a logiku zpracovaných materiálů, přístup a znalosti lektorky, efektivní využití moderní techniky ve výuce.“</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>Ing. Dagmar Šanderová</h2>
-                        <p class="work-pos">Učitelka anglického jazyka, Masarykova střední škola chemická, Praha 1</p>
-                        <p class="quote">„Velice přínosné je ozvučení celého systému. Studenti mohou samostatně bez fyzické přítomnosti lektora procvičovat a zlepšovat svoji výslovnost.“</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>Ing. Ondřej Tůma</h2>
-                        <p class="work-pos">Ředitel, FERRAM STROJÍRNA, s.r.o.</p>
-                        <p class="quote">„Kurzy jsou pro naše zaměstnance přínosné v tom, že se učí to, co potřebujeme, technickou angličtinu. Není to jako běžné kurzy "pořád dokola", ale výuka něčeho, co v praxi pracovníci použijí.“</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>Ing. Hana Balonová</h2>
-                        <p class="work-pos">Učitelka angličtiny, Střední škola průmyslová, Krnov</p>
-                        <p class="quote">„Rozhodla jsem se pro materiály, protože jsou velmi efektivní, osvojení slovní zásoby a vazeb je podpořeno poslechy a videi, výuka je pro studenty zábavná, výběr slovní zásoby byl proveden na základě požadavků z praxe.“</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>RNDr. Martin Smola</h2>
-                        <p class="work-pos">Učitel angličtiny, Střední škola sklářská, Železný Brod</p>
-                        <p class="quote">„Neznám jiný výukový materiál, který by ve výuce odborného jazyka byl cílen obdobným směrem. Navíc musím připustit, že je pro učitele příjemné, když chyby studentů kontroluje počítač.“</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>Andrea Piptová</h2>
-                        <p class="work-pos">Absolventka online kurzu odborné němčiny Služby v cestovním ruchu</p>
-                        <p class="quote">„Vzhledem k dnešní celkem hektické době je pro mě důležité, že nemusím nikam dojíždět a vše mohu přizpůsobit své chuti se učit a volnému času. Dále si moje sympatie získala výuková videa už jen proto, že jsou z praxe.“</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>Petr Jiskra MSc, MBA</h2>
-                        <p class="work-pos">HTMI HOTEL & TOURISM MANAGEMENT INSTITUTE, Sörenberg, Kanton Luzern</p>
-                        <p class="quote">„Věřím, že materiály pomohou zlepšit komunikaci v anglickém a německém jazyce v HORECA odvětví. Doufám, že bude možné, aby střední školy mohly těchto deset lekcí modulu Služby v cestovním ruchu zařadit do výuky každého studenta střední školy.“</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>Mgr. Jana Berkovcová</h2>
-                        <p class="work-pos">Hlavní garant jazykového vzdělání, Národní institut dalšího vzdělávání, Praha</p>
-                        <p class="quote">„Doposud mohli učitelé studovat odborný cizí jazyk pouze ze slovníků odborné terminologie, což není příliš efektivní. Využití ICT při osvojování odborného jazyka přináší názornost a zpětnou vazbu, což zvyšuje kvalitu studia.“</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>Mgr. Irena Jarošová</h2>
-                        <p class="work-pos">Lektorka angličtiny, České Budějovice</p>
-                        <p class="quote">„Za největší přínos OPEN LEARNING, jako lektorka angličtiny, považuji otevření se novým možnostem, jiné dimenzi výuky. Osobně cítím velkou svobodu a prostor pro zaměření se na konkrétní potřeby konkrétního studenta.“ </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>Mgr. Romana Fryčová</h2>
-                        <p class="work-pos">Překladatelka a tlumočnice z anglického jazyka, Ostrava</p>
-                        <p class="quote">„Zde se jedná o kvalitní výukový materiál formou samostudia online, což je zcela inovativní přístup, který rozvíjí samostatnost studentů a nutnost věnovat výuce čas i mimo školu či kurz, a to navíc velmi zábavnou formou. Hodnotím nejvyšší známkou.“  </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>Ing. Martin Kocourek</h2>
-                        <p class="work-pos">General manager, Hotel Bellevue Český Krumlov</p>
-                        <p class="quote">„Dle reakcí zaměstnanců můžu zodpovědně říci, že jazykové kurzy realizované Open Agency jsou vysoce profesionální, u našich zaměstnanců oblíbené a s odkazem na to, co jsem řekl výše, naší společné věci velmi prospěšné."</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="container testimony-container">
-                     <div class="testimony-caption">
-                        <h2>Ing. Roman Kašpárek</h2>
-                        <p class="work-pos">Řředitel SBU ZZ (výroba zdvihacích zařízení a autozvedáků) BRANO a.s.</p>
-                        <p class="quote">„Na kurzu odborné němčiny Obchod a marketing , který jsem absolvoval, oceňuji přehlednost a logiku zpracování lekcí. Obsah kurzu odpovídá reálným situacím u nás v podniku. Přínos vnímám ve vyváženosti psaného i mluveného slova a dostatku prostoru pro konverzaci.“</p>
-                     </div>
+      </div>
+   </section>
+   <section id="reference">
+      <div id="testimonyCarousel" class="carousel slide" data-ride="carousel">
+         <ol class="carousel-indicators">
+            <li data-target="#testimonyCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#testimonyCarousel" data-slide-to="1"></li>
+            <li data-target="#testimonyCarousel" data-slide-to="2"></li>
+            <li data-target="#testimonyCarousel" data-slide-to="3"></li>
+            <li data-target="#testimonyCarousel" data-slide-to="4"></li>
+            <li data-target="#testimonyCarousel" data-slide-to="5"></li>
+            <li data-target="#testimonyCarousel" data-slide-to="6"></li>
+            <li data-target="#testimonyCarousel" data-slide-to="7"></li>
+            <li data-target="#testimonyCarousel" data-slide-to="8"></li>
+            <li data-target="#testimonyCarousel" data-slide-to="9"></li>
+            <li data-target="#testimonyCarousel" data-slide-to="10"></li>
+            <li data-target="#testimonyCarousel" data-slide-to="11"></li>
+            <li data-target="#testimonyCarousel" data-slide-to="12"></li>
+            <li data-target="#testimonyCarousel" data-slide-to="13"></li>
+            <li data-target="#testimonyCarousel" data-slide-to="14"></li>
+         </ol>
+         <div class="carousel-inner">
+            <div class="item active">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>Ing. Josef Smutek</h2>
+                     <p class="work-pos">Jednatel, Prestar, s.r.o.</p>
+                     <p class="quote">„Ve firmě jednám s německými zákazníky denně, přesto – nebo právě proto – jsem
+                        využil možnosti navštěvovat kurz Maschinentechnologie. Vynechal jsem jenom jednu hodinu.“</p>
                   </div>
                </div>
             </div>
-            <a class="left carousel-control" href="#testimonyCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-            <a class="right carousel-control" href="#testimonyCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-         </div>
-      </section>
-      <section id="team" class="home-section text-center">
-         <div class="heading-about">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-8 col-lg-offset-2">
-                     <div class="wow bounceInDown" data-wow-delay="0.4s">
-                        <div class="section-heading">
-                           <h2>Náš Tým</h2>
-                        </div>
-                     </div>
+            <div class="item">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>Ing. Marek Breznen</h2>
+                     <p class="work-pos">Hlavní Technolog TAPI CZ, Teva Czech Industries s.r.o.</p>
+                     <p class="quote">„Výukové materiály jsou zpracovány moderní formou blízkou současnému mladému
+                        člověku, který již není zvyklý číst z knížek a skript a pro kterého internetová výuka a
+                        interaktivní online komunikace je tak přirozená, jako jídlo a pití.“</p>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>Ing. Petra Vehovská</h2>
+                     <p class="work-pos">Ekonomka, STROJÍRNA Vehovský s.r.o.</p>
+                     <p class="quote">„Absolvovala jsem kurz angličtiny Obchod a marketing a z výuky OPEN LEARNING jsem
+                        nadšená. Poprvé jsem v kurzu zažila naprosté sepětí s praxí. Lekce v podstatě kopírují reálné
+                        situace ve firmě. Díky možnosti učit se lekce souběžně v kurzu s lektorkou i doma online, bylo
+                        pro mě studium zábavné. Konečně jsem se při výuce jazyka výrazně posunula. Velmi oceňuji práci
+                        celého Vašeho týmu. Pokud chcete zkusit výuku „trošku jinak“, neváhejte! Mohu to jen vřele
+                        doporučit.“</p>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>Ing. Antonín Krejčí</h2>
+                     <p class="work-pos">Náměstek řízení jakosti, KOMAS, spol. s r.o.</p>
+                     <p class="quote">„V kurzu odborné němčiny Strojírenská technologie jsem ocenil kvalitu a logiku
+                        zpracovaných materiálů, přístup a znalosti lektorky, efektivní využití moderní techniky ve
+                        výuce.“</p>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>Ing. Dagmar Šanderová</h2>
+                     <p class="work-pos">Učitelka anglického jazyka, Masarykova střední škola chemická, Praha 1</p>
+                     <p class="quote">„Velice přínosné je ozvučení celého systému. Studenti mohou samostatně bez fyzické
+                        přítomnosti lektora procvičovat a zlepšovat svoji výslovnost.“</p>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>Ing. Ondřej Tůma</h2>
+                     <p class="work-pos">Ředitel, FERRAM STROJÍRNA, s.r.o.</p>
+                     <p class="quote">„Kurzy jsou pro naše zaměstnance přínosné v tom, že se učí to, co potřebujeme,
+                        technickou angličtinu. Není to jako běžné kurzy "pořád dokola", ale výuka něčeho, co v praxi
+                        pracovníci použijí.“</p>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>Ing. Hana Balonová</h2>
+                     <p class="work-pos">Učitelka angličtiny, Střední škola průmyslová, Krnov</p>
+                     <p class="quote">„Rozhodla jsem se pro materiály, protože jsou velmi efektivní, osvojení slovní
+                        zásoby a vazeb je podpořeno poslechy a videi, výuka je pro studenty zábavná, výběr slovní zásoby
+                        byl proveden na základě požadavků z praxe.“</p>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>RNDr. Martin Smola</h2>
+                     <p class="work-pos">Učitel angličtiny, Střední škola sklářská, Železný Brod</p>
+                     <p class="quote">„Neznám jiný výukový materiál, který by ve výuce odborného jazyka byl cílen
+                        obdobným směrem. Navíc musím připustit, že je pro učitele příjemné, když chyby studentů
+                        kontroluje počítač.“</p>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>Andrea Piptová</h2>
+                     <p class="work-pos">Absolventka online kurzu odborné němčiny Služby v cestovním ruchu</p>
+                     <p class="quote">„Vzhledem k dnešní celkem hektické době je pro mě důležité, že nemusím nikam
+                        dojíždět a vše mohu přizpůsobit své chuti se učit a volnému času. Dále si moje sympatie získala
+                        výuková videa už jen proto, že jsou z praxe.“</p>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>Petr Jiskra MSc, MBA</h2>
+                     <p class="work-pos">HTMI HOTEL & TOURISM MANAGEMENT INSTITUTE, Sörenberg, Kanton Luzern</p>
+                     <p class="quote">„Věřím, že materiály pomohou zlepšit komunikaci v anglickém a německém jazyce v
+                        HORECA odvětví. Doufám, že bude možné, aby střední školy mohly těchto deset lekcí modulu Služby
+                        v cestovním ruchu zařadit do výuky každého studenta střední školy.“</p>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>Mgr. Jana Berkovcová</h2>
+                     <p class="work-pos">Hlavní garant jazykového vzdělání, Národní institut dalšího vzdělávání, Praha
+                     </p>
+                     <p class="quote">„Doposud mohli učitelé studovat odborný cizí jazyk pouze ze slovníků odborné
+                        terminologie, což není příliš efektivní. Využití ICT při osvojování odborného jazyka přináší
+                        názornost a zpětnou vazbu, což zvyšuje kvalitu studia.“</p>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>Mgr. Irena Jarošová</h2>
+                     <p class="work-pos">Lektorka angličtiny, České Budějovice</p>
+                     <p class="quote">„Za největší přínos OPEN LEARNING, jako lektorka angličtiny, považuji otevření se
+                        novým možnostem, jiné dimenzi výuky. Osobně cítím velkou svobodu a prostor pro zaměření se na
+                        konkrétní potřeby konkrétního studenta.“ </p>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>Mgr. Romana Fryčová</h2>
+                     <p class="work-pos">Překladatelka a tlumočnice z anglického jazyka, Ostrava</p>
+                     <p class="quote">„Zde se jedná o kvalitní výukový materiál formou samostudia online, což je zcela
+                        inovativní přístup, který rozvíjí samostatnost studentů a nutnost věnovat výuce čas i mimo školu
+                        či kurz, a to navíc velmi zábavnou formou. Hodnotím nejvyšší známkou.“ </p>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>Ing. Martin Kocourek</h2>
+                     <p class="work-pos">General manager, Hotel Bellevue Český Krumlov</p>
+                     <p class="quote">„Dle reakcí zaměstnanců můžu zodpovědně říci, že jazykové kurzy realizované Open
+                        Agency jsou vysoce profesionální, u našich zaměstnanců oblíbené a s odkazem na to, co jsem řekl
+                        výše, naší společné věci velmi prospěšné."</p>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="container testimony-container">
+                  <div class="testimony-caption">
+                     <h2>Ing. Roman Kašpárek</h2>
+                     <p class="work-pos">Řředitel SBU ZZ (výroba zdvihacích zařízení a autozvedáků) BRANO a.s.</p>
+                     <p class="quote">„Na kurzu odborné němčiny Obchod a marketing , který jsem absolvoval, oceňuji
+                        přehlednost a logiku zpracování lekcí. Obsah kurzu odpovídá reálným situacím u nás v podniku.
+                        Přínos vnímám ve vyváženosti psaného i mluveného slova a dostatku prostoru pro konverzaci.“</p>
                   </div>
                </div>
             </div>
          </div>
+         <a class="left carousel-control" href="#testimonyCarousel" role="button" data-slide="prev"><span
+               class="glyphicon glyphicon-chevron-left"></span></a>
+         <a class="right carousel-control" href="#testimonyCarousel" role="button" data-slide="next"><span
+               class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
+   </section>
+   <section id="team" class="home-section text-center">
+      <div class="heading-about">
          <div class="container">
             <div class="row">
-               <div class="col-lg-2 col-lg-offset-5 teamer">
-                  <hr class="marginbot-50">
+               <div class="col-lg-8 col-lg-offset-2">
+                  <div class="wow bounceInDown" data-wow-delay="0.4s">
+                     <div class="section-heading">
+                        <h2>Náš Tým</h2>
+                     </div>
+                  </div>
                </div>
             </div>
-            <div class="row">
-               <div class="col-oz-3 col-sm-3 col-oz-2 ">
-                  <div class="wow fadeInLeft" data-wow-delay="0.2s">
-                     <div class="team boxed-grey ">
-                        <div class="inner">
-                           <a href="#"  data-toggle="modal" data-target="#team1Modal">
-                              <div class="avatar avatar-overlay kuncarova"></div>
-                           </a>
-                           <h5>Jitka Kunčarová</h5>
-                           <p class="subtitle">Jednatelka společnosti</p>
-                        </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-2 col-lg-offset-5 teamer">
+               <hr class="marginbot-50">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-oz-3 col-sm-3 col-oz-2 ">
+               <div class="wow fadeInLeft" data-wow-delay="0.2s">
+                  <div class="team boxed-grey ">
+                     <div class="inner">
+                        <a href="#" data-toggle="modal" data-target="#team1Modal">
+                           <div class="avatar avatar-overlay kuncarova"></div>
+                        </a>
+                        <h5>Jitka Kunčarová</h5>
+                        <p class="subtitle">Jednatelka společnosti</p>
                      </div>
                   </div>
                </div>
-               <div class="col-oz-3 col-sm-3 col-oz-2">
-                  <div class="wow fadeInLeft" data-wow-delay="0.2s">
-                     <div class="team boxed-grey">
-                        <div class="inner">
-                           <a href="#"  data-toggle="modal" data-target="#team2Modal">
-                              <div class="avatar avatar-overlay kuncar"></div>
-                           </a>
-                           <h5>Jiří Kunčar</h5>
-                           <p class="subtitle">Jednatel společnosti, programátor</p>
-                        </div>
+            </div>
+            <div class="col-oz-3 col-sm-3 col-oz-2">
+               <div class="wow fadeInLeft" data-wow-delay="0.2s">
+                  <div class="team boxed-grey">
+                     <div class="inner">
+                        <a href="#" data-toggle="modal" data-target="#team2Modal">
+                           <div class="avatar avatar-overlay kuncar"></div>
+                        </a>
+                        <h5>Jiří Kunčar</h5>
+                        <p class="subtitle">Jednatel společnosti, programátor</p>
                      </div>
                   </div>
                </div>
-               <div class="col-oz-3 col-sm-3 col-oz-2">
-                  <div class="wow fadeInUp" data-wow-delay="0.2s">
-                     <div class="team boxed-grey">
-                        <div class="inner">
-                           <a href="#"  data-toggle="modal" data-target="#team3Modal">
-                              <div class="avatar avatar-overlay oleksikova"></div>
-                           </a>
-                           <h5>Kateřina Oleksíková</h5>
-                           <p class="subtitle">Lektorka</p>
-                        </div>
+            </div>
+            <div class="col-oz-3 col-sm-3 col-oz-2">
+               <div class="wow fadeInUp" data-wow-delay="0.2s">
+                  <div class="team boxed-grey">
+                     <div class="inner">
+                        <a href="#" data-toggle="modal" data-target="#team3Modal">
+                           <div class="avatar avatar-overlay oleksikova"></div>
+                        </a>
+                        <h5>Kateřina Oleksíková</h5>
+                        <p class="subtitle">Lektorka</p>
                      </div>
                   </div>
                </div>
-               <div class=" col-oz-3 col-sm-3 col-oz-2">
-                  <div class="wow fadeInRight" data-wow-delay="0.2s">
-                     <div class="team boxed-grey">
-                        <div class="inner">
-                           <a href="#"  data-toggle="modal" data-target="#team4Modal">
-                              <div class="avatar avatar-overlay martinkova"></div>
-                           </a>
-                           <h5>Simona Martínková</h5>
-                           <p class="subtitle">Lektorka</p>
-                        </div>
+            </div>
+            <div class=" col-oz-3 col-sm-3 col-oz-2">
+               <div class="wow fadeInRight" data-wow-delay="0.2s">
+                  <div class="team boxed-grey">
+                     <div class="inner">
+                        <a href="#" data-toggle="modal" data-target="#team4Modal">
+                           <div class="avatar avatar-overlay martinkova"></div>
+                        </a>
+                        <h5>Simona Martínková</h5>
+                        <p class="subtitle">Lektorka</p>
                      </div>
                   </div>
                </div>
+            </div>
 
-               <div class="col-oz-3 col-sm-3 col-oz-2 ">
-                  <div class="wow fadeInLeft" data-wow-delay="0.2s">
-                     <div class="team boxed-grey">
-                        <div class="inner">
-                           <a href="#"  data-toggle="modal" data-target="#team6Modal">
-                              <div class="avatar avatar-overlay kosa"></div>
-                           </a>
-                           <h5>Peter Kóša</h5>
-                           <p class="subtitle">Programátor</p>
-                        </div>
+            <div class="col-oz-3 col-sm-3 col-oz-2 ">
+               <div class="wow fadeInLeft" data-wow-delay="0.2s">
+                  <div class="team boxed-grey">
+                     <div class="inner">
+                        <a href="#" data-toggle="modal" data-target="#team6Modal">
+                           <div class="avatar avatar-overlay kosa"></div>
+                        </a>
+                        <h5>Peter Kóša</h5>
+                        <p class="subtitle">Programátor</p>
                      </div>
                   </div>
                </div>
-               <div class="col-oz-3 col-sm-3 col-oz-2 ">
-                  <div class="wow fadeInUp" data-wow-delay="0.2s">
-                     <div class="team boxed-grey">
-                        <div class="inner">
-                           <a href="#"  data-toggle="modal" data-target="#team7Modal">
-                              <div class="avatar avatar-overlay feidl"></div>
-                           </a>
-                           <h5>Kamil Feidl</h5>
-                           <p class="subtitle">Metodik a lektor</p>
-                        </div>
+            </div>
+            <div class="col-oz-3 col-sm-3 col-oz-2 ">
+               <div class="wow fadeInUp" data-wow-delay="0.2s">
+                  <div class="team boxed-grey">
+                     <div class="inner">
+                        <a href="#" data-toggle="modal" data-target="#team7Modal">
+                           <div class="avatar avatar-overlay feidl"></div>
+                        </a>
+                        <h5>Kamil Feidl</h5>
+                        <p class="subtitle">Metodik a lektor</p>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         <div class="container">
-            <div class="row shorter">
-               <div class="col-oz-3 col-sm-3 col-md-2 ">
-                  <div class="wow fadeInUp" data-wow-delay="0.2s">
-                     <div class="team boxed-grey">
-                        <div class="inner">
-                           <a href="#"  data-toggle="modal" data-target="#team8Modal">
-                              <div class="avatar avatar-overlay zdenek-kuncar"></div>
-                           </a>
-                           <h5>Zdeněk Kunčar</h5>
-                           <p class="subtitle">Administrátor, online podpora</p>
-                        </div>
+      </div>
+      <div class="container">
+         <div class="row shorter">
+            <div class="col-oz-3 col-sm-3 col-md-2 ">
+               <div class="wow fadeInUp" data-wow-delay="0.2s">
+                  <div class="team boxed-grey">
+                     <div class="inner">
+                        <a href="#" data-toggle="modal" data-target="#team8Modal">
+                           <div class="avatar avatar-overlay zdenek-kuncar"></div>
+                        </a>
+                        <h5>Zdeněk Kunčar</h5>
+                        <p class="subtitle">Administrátor, online podpora</p>
                      </div>
                   </div>
                </div>
-               <div class="col-oz-3 col-sm-3 col-md-2">
-                  <div class="wow fadeInRight" data-wow-delay="0.2s">
-                     <div class="team boxed-grey">
-                        <div class="inner">
-                           <a href="#"  data-toggle="modal" data-target="#team9Modal">
-                              <div class="avatar avatar-overlay kudelova"></div>
-                           </a>
-                           <h5>Silvie Machovská</h5>
-                           <p class="subtitle">Office manager</p>
-                        </div>
+            </div>
+            <div class="col-oz-3 col-sm-3 col-md-2">
+               <div class="wow fadeInRight" data-wow-delay="0.2s">
+                  <div class="team boxed-grey">
+                     <div class="inner">
+                        <a href="#" data-toggle="modal" data-target="#team9Modal">
+                           <div class="avatar avatar-overlay kudelova"></div>
+                        </a>
+                        <h5>Silvie Machovská</h5>
+                        <p class="subtitle">Office manager</p>
                      </div>
                   </div>
                </div>
-               <div class="col-oz-3 col-sm-3 col-md-2">
-                  <div class="wow fadeInRight" data-wow-delay="0.2s">
-                     <div class="team boxed-grey">
-                        <div class="inner">
-                           <a href="#"  data-toggle="modal" data-target="#team10Modal">
-                              <div class="avatar avatar-overlay stankova"></div>
-                           </a>
-                           <h5>Barbora Staňková</h5>
-                           <p class="subtitle">Obchodní asistentka</p>
-                        </div>
+            </div>
+            <div class="col-oz-3 col-sm-3 col-md-2">
+               <div class="wow fadeInRight" data-wow-delay="0.2s">
+                  <div class="team boxed-grey">
+                     <div class="inner">
+                        <a href="#" data-toggle="modal" data-target="#team10Modal">
+                           <div class="avatar avatar-overlay stankova"></div>
+                        </a>
+                        <h5>Barbora Staňková</h5>
+                        <p class="subtitle">Obchodní asistentka</p>
                      </div>
                   </div>
                </div>
-               <div class="col-oz-3 col-sm-3 col-md-2">
-                  <div class="wow fadeInRight" data-wow-delay="0.2s">
-                     <div class="team boxed-grey">
-                        <div class="inner">
-                           <a href="#"  data-toggle="modal" data-target="#team11Modal">
-                              <div class="avatar avatar-overlay ayrapetyan"></div>
-                           </a>
-                           <h5>Julietta Ayrapetyan</h5>
-                           <p class="subtitle">Lektorka</p>
-                        </div>
+            </div>
+            <div class="col-oz-3 col-sm-3 col-md-2">
+               <div class="wow fadeInRight" data-wow-delay="0.2s">
+                  <div class="team boxed-grey">
+                     <div class="inner">
+                        <a href="#" data-toggle="modal" data-target="#team11Modal">
+                           <div class="avatar avatar-overlay ayrapetyan"></div>
+                        </a>
+                        <h5>Julietta Ayrapetyan</h5>
+                        <p class="subtitle">Lektorka</p>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-      </section>
-      <section id="contact" class="home-section text-center">
-         <div class="heading-contact">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-8 col-lg-offset-2">
-                     <div class="wow bounceInDown" data-wow-delay="0.4s">
-                        <div class="section-heading">
-                           <h2>Kontaktujte nás</h2>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+      </div>
+   </section>
+   <section id="contact" class="home-section text-center">
+      <div class="heading-contact">
          <div class="container">
             <div class="row">
-               <div class="col-lg-2 col-lg-offset-5">
-                  <hr class="marginbot-50">
+               <div class="col-lg-8 col-lg-offset-2">
+                  <div class="wow bounceInDown" data-wow-delay="0.4s">
+                     <div class="section-heading">
+                        <h2>Kontaktujte nás</h2>
+                     </div>
+                  </div>
                </div>
             </div>
-            <div class="row">
-               <div class="col-lg-8 three-col">
-                  <div class="boxed-grey contact">
-                     <form id="contact-form" action="https://docs.google.com/forms/d/1eBVIuvNzcj9c6CQ4GdnCmD38l7nONRe1v1VSCbsAWWY/formResponse" method="POST" target="_blank">
-                        <div class="row">
-                           <div class="col-md-6">
-                              <div class="form-group">
-                                 <label>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-2 col-lg-offset-5">
+               <hr class="marginbot-50">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-lg-8 three-col">
+               <div class="boxed-grey contact">
+                  <form id="contact-form"
+                     action="https://docs.google.com/forms/d/1eBVIuvNzcj9c6CQ4GdnCmD38l7nONRe1v1VSCbsAWWY/formResponse"
+                     method="POST" target="_blank">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="form-group">
+                              <label>
                                  Jméno</label>
-                                 <input type="text" class="form-control" name="entry.911354995" id="entry_911354995" placeholder="Vaše jméno" required="required" />
-                              </div>
-                              <div class="form-group">
-                                 <label>
+                              <input type="text" class="form-control" name="entry.911354995" id="entry_911354995"
+                                 placeholder="Vaše jméno" required="required" />
+                           </div>
+                           <div class="form-group">
+                              <label>
                                  Vaše společnost</label>
-                                 <input type="text" class="form-control" name="entry.152716316" id="entry_152716316" placeholder="Jméno Vaší společnost" />
-                              </div>
-                              <div class="form-group">
-                                 <label>
+                              <input type="text" class="form-control" name="entry.152716316" id="entry_152716316"
+                                 placeholder="Jméno Vaší společnost" />
+                           </div>
+                           <div class="form-group">
+                              <label>
                                  Telefon</label>
-                                 <input type="text" class="form-control" name="entry.358642534"  id="entry_358642534" placeholder="Váš telefon" required="required" />
-                              </div>
-                              <div class="form-group">
-                                 <label>
+                              <input type="text" class="form-control" name="entry.358642534" id="entry_358642534"
+                                 placeholder="Váš telefon" required="required" />
+                           </div>
+                           <div class="form-group">
+                              <label>
                                  Email </label>
-                                 <div class="input-group">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
-                                    </span>
-                                    <input type="email" class="form-control" id="entry_1866802761" name="entry.1866802761" placeholder="Váš Email" required="required" />
-                                 </div>
+                              <div class="input-group">
+                                 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                 </span>
+                                 <input type="email" class="form-control" id="entry_1866802761" name="entry.1866802761"
+                                    placeholder="Váš Email" required="required" />
                               </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="form-group">
-                                 <label>
-                                 Zpráva</label>
-                                 <textarea id="entry_485693227" name="entry.485693227" class="form-control" rows="9" cols="25" required="required"
-                                    placeholder="Vaše zpráva"></textarea>
-                              </div>
-                              <input type="hidden" name="draftResponse" value="[,,&quot;-5450378872991277903&quot;]">
-                              <input type="hidden" name="pageHistory" value="0">
-                              <input type="hidden" name="fbzx" value="-5450378872991277903">
-                           </div>
-                           <div class="col-md-12">
-                              <button type="submit" name="submit" class="btn btn-skin pull-right" id="btnContactUs">
-                              Odeslat</button>
                            </div>
                         </div>
-                     </form>
-                  </div>
+                        <div class="col-md-6">
+                           <div class="form-group">
+                              <label>
+                                 Zpráva</label>
+                              <textarea id="entry_485693227" name="entry.485693227" class="form-control" rows="9"
+                                 cols="25" required="required" placeholder="Vaše zpráva"></textarea>
+                           </div>
+                           <input type="hidden" name="draftResponse" value="[,,&quot;-5450378872991277903&quot;]">
+                           <input type="hidden" name="pageHistory" value="0">
+                           <input type="hidden" name="fbzx" value="-5450378872991277903">
+                        </div>
+                        <div class="col-md-12">
+                           <button type="submit" name="submit" class="btn btn-skin pull-right" id="btnContactUs">
+                              Odeslat</button>
+                        </div>
+                     </div>
+                  </form>
                </div>
-               <div class="col-lg-4 quarter-col">
-                  <div class="widget-contact">
-                     <h5>Adresa</h5>
-                     <address>
-                        <strong>OPEN AGENCY s.r.o.</strong><br>
-                        Solná 45/19, 74601, Opava<br>
-                        Naše kancelář:<br>
-                        Pekařská 21, 74601, Opava<br>
-                        tel: +420 608 658 151
-                     </address>
-                     <address>
-                        <strong>Email</strong><br>
-                        <a target="_top" href="mailto:kuncarova@openagency.cz">kuncarova@openagency.cz</a>
-                     </address>
-                     <!--<address>
+            </div>
+            <div class="col-lg-4 quarter-col">
+               <div class="widget-contact">
+                  <h5>Adresa</h5>
+                  <address>
+                     <strong>OPEN AGENCY s.r.o.</strong><br>
+                     Solná 45/19, 74601, Opava<br>
+                     Naše kancelář:<br>
+                     Pekařská 21, 74601, Opava<br>
+                     tel: +420 608 658 151
+                  </address>
+                  <address>
+                     <strong>Email</strong><br>
+                     <a target="_top" href="mailto:kuncarova@openagency.cz">kuncarova@openagency.cz</a>
+                  </address>
+                  <!--<address>
                         <strong>Přidejte si nás</strong><br>
                         <ul class="company-social">
                            <li class="social-facebook"><a href="https://www.facebook.com/openagency.cz" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -1048,12 +1210,12 @@
                            <li class="social-google"><a href="https://plus.google.com/110290286177953994784/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                         </ul>
                      </address> -->
-                  </div>
                </div>
             </div>
          </div>
-      </section>
-      <!-- <script src="https://maps.googleapis.com/maps/api/js"></script>
+      </div>
+   </section>
+   <!-- <script src="https://maps.googleapis.com/maps/api/js"></script>
       <section id="mapa">
          <div class="container">
             <div class="row">
@@ -1062,54 +1224,54 @@
             </div>
          </div>
       </section> -->
-      <footer>
-         <div class="container">
-            <div class="row">
-               <div class="col-oz-3 col-sm-3 col-md-3 ">
-                  <div class="wow fadeInUp" data-wow-delay="0.2s">
-                     <ul class="bottoMenu">
-                        <li class="hed">OPEN AGENCY</li>
-                        <li><a href="#first">O nás</a></li>
-                        <li><a href="#products">Výukové materiály</a></li>
-                        <li><a href="#reference">Reference</a></li>
-                        <li><a href="#team">Náš tým</a></li>
-                        <li><a href="#contact">Kontakt</a></li>
-                        <li><a href="pdf/cenik2021.pdf" target="_blank">Ceník</a></li>
-                     </ul>
-                  </div>
+   <footer>
+      <div class="container">
+         <div class="row">
+            <div class="col-oz-3 col-sm-3 col-md-3 ">
+               <div class="wow fadeInUp" data-wow-delay="0.2s">
+                  <ul class="bottoMenu">
+                     <li class="hed">OPEN AGENCY</li>
+                     <li><a href="#first">O nás</a></li>
+                     <li><a href="#products">Výukové materiály</a></li>
+                     <li><a href="#reference">Reference</a></li>
+                     <li><a href="#team">Náš tým</a></li>
+                     <li><a href="#contact">Kontakt</a></li>
+                     <li><a href="pdf/cenik2021.pdf" target="_blank">Ceník</a></li>
+                  </ul>
                </div>
-               <div class="col-oz-3 col-sm-3 col-md-3 ">
-                  <div class="wow fadeInUp" data-wow-delay="0.5s">
-                     <ul class="bottoMenu">
-                        <li class="hed">Přístupy studentů</li>
-                        <li><a href="https://openlearning.cz/login" target="_blank">Angličtina pro cestovní ruch</a></li>
-                        <li><a href="https://openlearning.cz/login" target="_blank">Angličtina pro chemii</a></li>
-                        <li><a href="https://openlearning.cz/login" target="_blank">Angličtina pro obchodníky</a></li>
-                        <li><a href="https://openlearning.cz/login" target="_blank">Angličtina pro strojaře</a></li>
-                        <li><a href="https://openlearning.cz/login" target="_blank">Němčina pro cestovní ruch</a></li>
-                        <li><a href="https://openlearning.cz/login" target="_blank">Němčina pro obchodníky</a></li>
-                        <li><a href="https://openlearning.cz/login" target="_blank">Němčina pro strojaře</a></li>
-                        <li><a href="https://openlearning.cz/login" target="_blank">Ruština pro obchodníky</a></li>
-                     </ul>
-                  </div>
+            </div>
+            <div class="col-oz-3 col-sm-3 col-md-3 ">
+               <div class="wow fadeInUp" data-wow-delay="0.5s">
+                  <ul class="bottoMenu">
+                     <li class="hed">Přístupy studentů</li>
+                     <li><a href="https://openlearning.cz/login" target="_blank">Angličtina pro cestovní ruch</a></li>
+                     <li><a href="https://openlearning.cz/login" target="_blank">Angličtina pro chemii</a></li>
+                     <li><a href="https://openlearning.cz/login" target="_blank">Angličtina pro obchodníky</a></li>
+                     <li><a href="https://openlearning.cz/login" target="_blank">Angličtina pro strojaře</a></li>
+                     <li><a href="https://openlearning.cz/login" target="_blank">Němčina pro cestovní ruch</a></li>
+                     <li><a href="https://openlearning.cz/login" target="_blank">Němčina pro obchodníky</a></li>
+                     <li><a href="https://openlearning.cz/login" target="_blank">Němčina pro strojaře</a></li>
+                     <li><a href="https://openlearning.cz/login" target="_blank">Ruština pro obchodníky</a></li>
+                  </ul>
                </div>
-               <div class="col-oz-3 col-sm-3 col-md-3 ">
-                  <div class="wow fadeInUp" data-wow-delay="0.8s">
-                     <ul class="bottoMenu">
-                        <li class="hed">informace</li>
-                        <li><a href="pdf/GDPR.pdf">Právní ustanovení k GDPR</a></li>
-                        <li><a href="xls/zavazna-objednavka.xlsx" target="_blank">Závazná objednávka</a></li>
-                        <li><a href="pdf/NEWSLETTER32.pdf">Novinky 2020/4</a></li>
-                        <li><a href="pdf/NEWSLETTER31.pdf">Novinky 2020/3</a></li>
-                        <li><a href="pdf/NEWSLETTER30.pdf">Novinky 2020/2</a></li>
-                        <li><a href="pdf/NEWSLETTER29.pdf">Novinky 2020/1</a></li>
-                        <li><a href="pdf/NEWSLETTER28.pdf">Novinky 2019/3</a></li>
-                        <li><a href="pdf/NEWSLETTER27.pdf">Novinky 2019/2</a></li>
-                        <li><a href="pdf/NEWSLETTER26.pdf">Novinky 2019/1</a></li>
-                        <li><a href="pdf/NEWSLETTER25.pdf">Novinky 2018/3</a></li>
-                        <li><a href="pdf/NEWSLETTER24.pdf">Novinky 2018/2</a></li>
-                        <li><a href="pdf/NEWSLETTER23.pdf">Novinky 2018/1</a></li>
-                        <!--<li><a href="pdf/NEWSLETTER22.pdf">Novinky 2017/3</a></li>
+            </div>
+            <div class="col-oz-3 col-sm-3 col-md-3 ">
+               <div class="wow fadeInUp" data-wow-delay="0.8s">
+                  <ul class="bottoMenu">
+                     <li class="hed">informace</li>
+                     <li><a href="pdf/GDPR.pdf">Právní ustanovení k GDPR</a></li>
+                     <li><a href="xls/zavazna-objednavka.xlsx" target="_blank">Závazná objednávka</a></li>
+                     <li><a href="pdf/NEWSLETTER32.pdf">Novinky 2020/4</a></li>
+                     <li><a href="pdf/NEWSLETTER31.pdf">Novinky 2020/3</a></li>
+                     <li><a href="pdf/NEWSLETTER30.pdf">Novinky 2020/2</a></li>
+                     <li><a href="pdf/NEWSLETTER29.pdf">Novinky 2020/1</a></li>
+                     <li><a href="pdf/NEWSLETTER28.pdf">Novinky 2019/3</a></li>
+                     <li><a href="pdf/NEWSLETTER27.pdf">Novinky 2019/2</a></li>
+                     <li><a href="pdf/NEWSLETTER26.pdf">Novinky 2019/1</a></li>
+                     <li><a href="pdf/NEWSLETTER25.pdf">Novinky 2018/3</a></li>
+                     <li><a href="pdf/NEWSLETTER24.pdf">Novinky 2018/2</a></li>
+                     <li><a href="pdf/NEWSLETTER23.pdf">Novinky 2018/1</a></li>
+                     <!--<li><a href="pdf/NEWSLETTER22.pdf">Novinky 2017/3</a></li>
                         <li><a href="pdf/NEWSLETTER21.pdf">Novinky 2017/2</a></li>
                         <li><a href="pdf/NEWSLETTER20.pdf">Novinky 2017/1</a></li>
                         <li><a href="pdf/NEWSLETTER19.pdf">Novinky 2016/6</a></li>
@@ -1131,378 +1293,468 @@
                         <li><a href="pdf/NEWSLETTER3.pdf">Novinky 2014/3</a></li>
                         <li><a href="pdf/NEWSLETTER2.pdf">Novinky 2014/2</a></li>
                         <li><a href="pdf/NEWSLETTER1.pdf">Novinky 2014/1</a></li>-->
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-oz-3 col-sm-3 col-md-3 ">
-                  <div class="wow fadeInUp" data-wow-delay="1.1s">
-                     <ul class="bottoMenu">
-                        <li class="hed">OBCHODNÍ INFORMACE</li>
-                        <li>IČO: 28598091 </li>
-                        <li>DIČ: CZ28598091 </li>
-                        <li>Bankovní spojení: Fio banka 2300539840/2010 </li>
-                        <li>Krajský soud v Ostravě, oddíl C, vložka 33862</li>
-                     </ul>
-                  </div>
+                  </ul>
                </div>
             </div>
-            <div class="row">
-               <div class="col-md-12 col-lg-12">
-                  <div class="wow shake" data-wow-delay="0.4s">
-                     <div class="page-scroll marginbot-30">
-                        <a href="#intro" id="totop" class="btn btn-circle">
+            <div class="col-oz-3 col-sm-3 col-md-3 ">
+               <div class="wow fadeInUp" data-wow-delay="1.1s">
+                  <ul class="bottoMenu">
+                     <li class="hed">OBCHODNÍ INFORMACE</li>
+                     <li>IČO: 28598091 </li>
+                     <li>DIČ: CZ28598091 </li>
+                     <li>Bankovní spojení: Fio banka 2300539840/2010 </li>
+                     <li>Krajský soud v Ostravě, oddíl C, vložka 33862</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12 col-lg-12">
+               <div class="wow shake" data-wow-delay="0.4s">
+                  <div class="page-scroll marginbot-30">
+                     <a href="#intro" id="totop" class="btn btn-circle">
                         <i class="fa fa-angle-double-up animated"></i>
-                        </a>
-                     </div>
-                  </div>
-                  <p class="copywrite"><a title="OPEN AGENCY s.r.o." href="http://www.openagency.cz">OPEN AGENCY s.r.o.</a> | &copy; 2014 - 2020</p>
-               </div>
-            </div>
-         </div>
-      </footer>
-      <div class="modal fade" id="team1Modal" tabindex="-1" role="dialog" aria-labelledby="team1Modal" aria-hidden="true">
-         <div class="modal-dialog teamModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-               </div>
-               <div class="modal-body">
-                  <div class="left-product-body">
-                     <div class="avatar"><img src="img/team/kuncarova-jitka-open-agency.jpg" alt="Jitka Kunčarová" class="img-responsive img-circle" /></div>
-                     <a class="btn btn-lg btn-primary" target="_top" href="mailto:kuncarova@openagency.cz"  role="button">Kontaktujte mě</a>
-                  </div>
-                  <div class="right-product-body">
-                     <h4>Jitka Kunčarová</h4>
-                     <p><i>Jednatelka společnosti</i></p>
-                     <hr class="marginbot-50">
-                     <p>Kreativní manažerka se zkušenostmi z veřejného i soukromého školství, působila na střední i vysoké škole, řídila jazykovou agenturu a divizi celoživotního vzdělávání na VŠP a.s. v Ostravě. Chce dělat jen to, co má smysl a vede k cíli. Ráda pracuje s motivovanými lidmi, kterým nevadí, že vidí dopředu. Dává řád a smysl vytvářeným souborům výukových materiálů k modulům odborné angličtiny, připravuje a řídí projekty ESF. Byla zapojena do řady mezinárodních projektů, absolvovala zahraniční stáže a studijní pobyty k různým oblastem vzdělávání. Publikuje v oblasti kvality vzdělávání.</p>
+                     </a>
                   </div>
                </div>
-               <div class="modal-footer">
-               </div>
+               <p class="copywrite"><a title="OPEN AGENCY s.r.o." href="http://www.openagency.cz">OPEN AGENCY s.r.o.</a>
+                  | &copy; 2014 - 2020</p>
             </div>
          </div>
       </div>
-      <div class="modal fade" id="team2Modal" tabindex="-1" role="dialog" aria-labelledby="team2Modal" aria-hidden="true">
-         <div class="modal-dialog teamModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+   </footer>
+   <div class="modal fade" id="team1Modal" tabindex="-1" role="dialog" aria-labelledby="team1Modal" aria-hidden="true">
+      <div class="modal-dialog teamModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+               <div class="left-product-body">
+                  <div class="avatar"><img src="img/team/kuncarova-jitka-open-agency.jpg" alt="Jitka Kunčarová"
+                        class="img-responsive img-circle" /></div>
+                  <a class="btn btn-lg btn-primary" target="_top" href="mailto:kuncarova@openagency.cz"
+                     role="button">Kontaktujte mě</a>
                </div>
-               <div class="modal-body">
-                  <div class="left-product-body">
-                     <div class="avatar"><img src="img/team/kuncar-open-agency.jpg" alt="Jiří Kunčar" class="img-responsive img-circle" /></div>
-                     <a class="btn btn-lg btn-primary" target="_top" href="mailto:jiri.kuncar@openagency.cz"  role="button">Kontaktujte mě</a>
-                  </div>
-                  <div class="right-product-body">
-                     <h4>Jiří Kunčar</h4>
-                     <p><i>Jednatel společnosti, programátor</i></p>
-                     <hr class="marginbot-50">
-                     <p>Motivovaný programátor, který stojí za vznikem aplikace OPEN LEARNING pro online podporu vzdělávání. V současné době působí v CERNu ve Švýcarsku. Vystudoval Univerzitu Karlovu a softwarové inženýrství na Mälardalens högskola ve Švédsku. Spolupracoval jako programátor se společnostmi Anvio.cz, TDO s.r.o., Red Hat.</p>
-                  </div>
+               <div class="right-product-body">
+                  <h4>Jitka Kunčarová</h4>
+                  <p><i>Jednatelka společnosti</i></p>
+                  <hr class="marginbot-50">
+                  <p>Kreativní manažerka se zkušenostmi z veřejného i soukromého školství, působila na střední i vysoké
+                     škole, řídila jazykovou agenturu a divizi celoživotního vzdělávání na VŠP a.s. v Ostravě. Chce
+                     dělat jen to, co má smysl a vede k cíli. Ráda pracuje s motivovanými lidmi, kterým nevadí, že vidí
+                     dopředu. Dává řád a smysl vytvářeným souborům výukových materiálů k modulům odborné angličtiny,
+                     připravuje a řídí projekty ESF. Byla zapojena do řady mezinárodních projektů, absolvovala
+                     zahraniční stáže a studijní pobyty k různým oblastem vzdělávání. Publikuje v oblasti kvality
+                     vzdělávání.</p>
                </div>
-               <div class="modal-footer">
-               </div>
+            </div>
+            <div class="modal-footer">
             </div>
          </div>
       </div>
-      <div class="modal fade" id="team3Modal" tabindex="-1" role="dialog" aria-labelledby="team3Modal" aria-hidden="true">
-         <div class="modal-dialog teamModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+   </div>
+   <div class="modal fade" id="team2Modal" tabindex="-1" role="dialog" aria-labelledby="team2Modal" aria-hidden="true">
+      <div class="modal-dialog teamModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+               <div class="left-product-body">
+                  <div class="avatar"><img src="img/team/kuncar-open-agency.jpg" alt="Jiří Kunčar"
+                        class="img-responsive img-circle" /></div>
+                  <a class="btn btn-lg btn-primary" target="_top" href="mailto:jiri.kuncar@openagency.cz"
+                     role="button">Kontaktujte mě</a>
                </div>
-               <div class="modal-body">
-                  <div class="left-product-body">
-                     <div class="avatar"><img src="img/team/oleksikova-katerina-open-agency.jpg" alt="Kateřina Oleksíková" class="img-responsive img-circle" /></div>
-                     <a class="btn btn-lg btn-primary" target="_top" href="mailto:oleksikova@openagency.cz"  role="button">Kontaktujte mě</a>
-                  </div>
-                  <div class="right-product-body">
-                     <h4>Kateřina Oleksíková</h4>
-                     <p><i>Lektorka</i></p>
-                     <hr class="marginbot-50">
-                     <p>Aktivní překladatelka a tlumočnice využívá své dlouholeté zkušenosti s německým jazykem ve vzdělávání dospělých. Při výuce jazyka se řídí heslem: Mozek je sval jako každý jiný, je třeba ho trénovat - pak se výsledky dostaví. Díky svému systematickému a pozitivnímu přístupu a schopnosti domluvit se (nejen v cizím jazyce) nemá problém spolupracovat v týmu různorodých lidí. Ráda pracuje na projektech, které mají smysl. Vystudovala germanistiku a historii na Filozofické fakultě v Olomouci.
-                     </p>
-                  </div>
+               <div class="right-product-body">
+                  <h4>Jiří Kunčar</h4>
+                  <p><i>Jednatel společnosti, programátor</i></p>
+                  <hr class="marginbot-50">
+                  <p>Motivovaný programátor, který stojí za vznikem aplikace OPEN LEARNING pro online podporu
+                     vzdělávání. V současné době působí v CERNu ve Švýcarsku. Vystudoval Univerzitu Karlovu a softwarové
+                     inženýrství na Mälardalens högskola ve Švédsku. Spolupracoval jako programátor se společnostmi
+                     Anvio.cz, TDO s.r.o., Red Hat.</p>
                </div>
-               <div class="modal-footer">
-               </div>
+            </div>
+            <div class="modal-footer">
             </div>
          </div>
       </div>
-      <div class="modal fade" id="team4Modal" tabindex="-1" role="dialog" aria-labelledby="team4Modal" aria-hidden="true">
-         <div class="modal-dialog teamModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-               </div>
-               <div class="modal-body">
-                  <div class="left-product-body">
-                     <div class="avatar"><img src="img/team/martinkova-open-agency.jpg" alt="Simona Martínková" class="img-responsive img-circle" /></div>
-                     <a class="btn btn-lg btn-primary" target="_top" href="mailto:simona.martinkova1@gmail.com"  role="button">Kontaktujte mě</a>
-                  </div>
-                  <div class="right-product-body">
-                     <h4>Simona Martínková</h4>
-                     <p><i>Lektorka</i></p>
-                     <hr class="marginbot-50">
-                     <p>Má bohaté zkušenosti s uplatňováním moderních vyučovacích metod v oblasti výuky cizích jazyků ve školách i vzdělávání dospělých. Je pozitivní, umí zaujmout a přesvědčit, má vynikající komunikační dovednosti v českém, anglickém a francouzském jazyce. Je autorkou prvních výukových materiálů k modulu Základní chemická terminologie. Vystudovala Pedagogickou fakultu v Olomouci a Filozoficko-přírodovědeckou fakultu v Opavě. Učila na vysoké i na základní škole.</p>
-                  </div>
-               </div>
-               <div class="modal-footer">
-               </div>
+   </div>
+   <div class="modal fade" id="team3Modal" tabindex="-1" role="dialog" aria-labelledby="team3Modal" aria-hidden="true">
+      <div class="modal-dialog teamModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
             </div>
-         </div>
-      </div>
-      <div class="modal fade" id="team5Modal" tabindex="-1" role="dialog" aria-labelledby="team5Modal" aria-hidden="true">
-         <div class="modal-dialog teamModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <div class="modal-body">
+               <div class="left-product-body">
+                  <div class="avatar"><img src="img/team/oleksikova-katerina-open-agency.jpg" alt="Kateřina Oleksíková"
+                        class="img-responsive img-circle" /></div>
+                  <a class="btn btn-lg btn-primary" target="_top" href="mailto:oleksikova@openagency.cz"
+                     role="button">Kontaktujte mě</a>
                </div>
-               <div class="modal-body">
-                  <div class="left-product-body">
-                     <div class="avatar"><img src="img/team/monika-kunzova-open-agency.jpg" alt="Monika Kunzová" class="img-responsive img-circle" /></div>
-                     <a class="btn btn-lg btn-primary" target="_top" href="mailto:monika.kunzova@gmail.com"  role="button">Kontaktujte mě</a>
-                  </div>
-                  <div class="right-product-body">
-                     <h4>Monika Kunzová</h4>
-                     <p><i>Lektorka</i></p>
-                     <hr class="marginbot-50">
-                     <p>Vystudovala angličtinu a francouzštinu na Filozofické fakultě Masarykovy univerzity v Brně a následně česko-francouzské magisterské studium veřejné správy na Ekonomicko-správní fakultě téže univerzity. V rámci studia absolvovala pobyty na Aarhus Universitet v Dánsku a na Université de Rennes 1 ve Francii, kde měla možnost seznámit se s různými vyučovacími metodami. Výuce angličtiny a francouzštiny se věnuje již od vysokoškolských studií a má rovněž bohaté zkušenosti s využitím cizích jazyků v praxi při výkonu povolání. Koncept Open Learning ji velice zaujal a baví ji dále prozkoumávat jeho možnosti a představovat je studentům ve firemních kurzech.</p>
-                  </div>
-               </div>
-               <div class="modal-footer">
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal fade" id="team6Modal" tabindex="-1" role="dialog" aria-labelledby="team6Modal" aria-hidden="true">
-         <div class="modal-dialog teamModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-               </div>
-               <div class="modal-body">
-                  <div class="left-product-body">
-                     <div class="avatar"><img src="img/team/kosa-open-agency.jpg" alt="Peter Kóša" class="img-responsive img-circle" /></div>
-                     <a class="btn btn-lg btn-primary" target="_top" href="mailto:support@openagency.cz"  role="button">Kontaktujte mě</a>
-                  </div>
-                  <div class="right-product-body">
-                     <h4>Peter Kóša</h4>
-                     <p><i>Programátor</i></p>
-                     <hr class="marginbot-50">
-                     <p>Absolvent MFF UK v Praze. Zabezpečuje technické zázemí projektů, vývoj aplikace, správu serverů a databází.</p>
-                  </div>
-               </div>
-               <div class="modal-footer">
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal fade" id="team7Modal" tabindex="-1" role="dialog" aria-labelledby="team7Modal" aria-hidden="true">
-         <div class="modal-dialog teamModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-               </div>
-               <div class="modal-body">
-                  <div class="left-product-body">
-                     <div class="avatar"><img src="img/team/kamil-feidl-open-agency.jpg" alt="Kamil Feidl" class="img-responsive img-circle" /></div>
-                     <a class="btn btn-lg btn-primary" target="_top" href="mailto:feidl@openagency.cz"  role="button">Kontaktujte mě</a>
-                  </div>
-                  <div class="right-product-body">
-                     <h4>Kamil Feidl</h4>
-                     <p><i>Metodik výuky cizích jazyků</i></p>
-                     <hr class="marginbot-50">
-                     <p>
-                     Žil několik let v Anglii, Ekvádoru, USA a Irsku. Aktivně se podílí na akcích neziskové organizace pro ochranu přírody, pracuje jako lektor angličtiny a španělštiny a mentor ve vodohospodářské sféře. Má zkušenosti z ocelářství, ochrany přírody, hoteliérství, ekonomiky a psychologie učení. Působil jako lektor angličtiny ve společnostech RWE, ČEZ, Autoheller, SmVak, ale i v malých a středních firmách. Je autorem brožury Jak se (ne)naučit cizí jazyk. Po letech vedení nejrůznější výuky a více než 13 000 odučených hodinách věří, že výukový systém OPEN LEARING dokáže rychle a kvalitně připravit pro praxi každého motivovaného studenta. Je to vysoce efektivní nastroj, který umožňuje učit se právě to, co potřebujete, a inspiruje k dalšímu studiu. V Open Agency má na starosti metodiku výukových modulů a metodické vedení lektorů.
-                     </p>
-                  </div>
-               </div>
-               <div class="modal-footer">
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal fade" id="team8Modal" tabindex="-1" role="dialog" aria-labelledby="team8Modal" aria-hidden="true">
-         <div class="modal-dialog teamModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-               </div>
-               <div class="modal-body">
-                  <div class="left-product-body">
-                     <div class="avatar"><img src="img/team/zdenek-kuncar-open-agency.jpg" alt="Zdeněk Kunčar" class="img-responsive img-circle" /></div>
-                     <a class="btn btn-lg btn-primary" target="_top" href="mailto:zdenek.kuncar@openagency.cz"  role="button">Kontaktujte mě</a>
-                  </div>
-                  <div class="right-product-body">
-                     <h4>Zdeněk Kunčar</h4>
-                     <p><i>Administrátor, online podpora</i></p>
-                     <hr class="marginbot-50">
-                     <p>Student informačních technologií na Aalborg University v Dánsku. Podílí se na tvorbě audiovizuálních materiálů pro studenty a na neustálém vývoji aplikace OPEN LEARNING. Své technické znalosti uplatňuje při poskytování online podpory uživatelům OPEN LEARNING.</p>
-                  </div>
-               </div>
-               <div class="modal-footer">
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal fade" id="team9Modal" tabindex="-1" role="dialog" aria-labelledby="team9Modal" aria-hidden="true">
-         <div class="modal-dialog teamModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-               </div>
-               <div class="modal-body">
-                  <div class="left-product-body">
-                     <div class="avatar"><img src="img/team/silvie-kudelova-open-agency.jpg" alt="Silvie Kudelova" class="img-responsive img-circle" /></div>
-                     <a class="btn btn-lg btn-primary" target="_top" href="mailto:machovska@openagency.cz"  role="button">Kontaktujte mě</a>
-                  </div>
-                  <div class="right-product-body">
-                     <h4>Silvie Machovská</h4>
-                     <p><i>Office manager</i></p>
-                     <hr class="marginbot-50">
-                     <p>Vystudovala jsem informační vědu a knihovnictví na Slezské univerzitě v Opavě. Po studiu jsem žila tři roky v Anglii, kde jsem získala Cambridge certifikát ESOL Skills for life (nejvyšší úroveň) a certifikát FCE. Angličtina se stala mým koníčkem, a proto se chci také zaměřit na její výuku. Mám roční zkušenost s vyučováním anglického jazyka začátečníků a středně pokročilých žáků různého věku. Nyní jsem na mateřské dovolené a chtěla bych ji využít k získání CAE certifikátu a ke vzdělávání s využitím OPEN LEARNING.</p>
-                     <p>S OPEN AGENCY spolupracuji, protože se nezaměřuje jen na každodenní využití angličtiny, ale specializuje se na odbornou angličtinu. Při studiu s OPEN LEARNING se neučím jen jazyk, ale vstřebávám plno nových odborných informací, které jsou navíc podávány zábavnou formou. Je velice důležité, abychom v dnešní době uměli anglicky vyjádřit například matematickou rovnici a ne jen mluvit o počasí.</p>
-                  </div>
-               </div>
-               <div class="modal-footer">
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal fade" id="team10Modal" tabindex="-1" role="dialog" aria-labelledby="team9Modal" aria-hidden="true">
-         <div class="modal-dialog teamModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-               </div>
-               <div class="modal-body">
-                  <div class="left-product-body">
-                     <div class="avatar"><img src="img/team/barbora-stankova-open-agency.jpg" alt="Barbora Staňková" class="img-responsive img-circle" /></div>
-                     <a class="btn btn-lg btn-primary" target="_top" href="mailto:stankova@openagency.cz"  role="button">Kontaktujte mě</a>
-                  </div>
-                  <div class="right-product-body">
-                     <h4>Barbora Staňková</h4>
-                     <p><i>Obchodní asistentka</i></p>
-                     <hr class="marginbot-50">
-                     <p>Studentka Vysoké školy báňské - Technické univerzity Ostrava, obor účetnictví a daně. Absolvovala zahraniční studijní pobyt Erasmus ve Španělsku a přesvědčila se, že jazykové vzdělávání otevírá nové jedinečné možnosti jak v pracovním, tak i v osobním životě.  V OPEN AGENCY zajišťuje dílčí obchodní činnosti.</p>
+               <div class="right-product-body">
+                  <h4>Kateřina Oleksíková</h4>
+                  <p><i>Lektorka</i></p>
+                  <hr class="marginbot-50">
+                  <p>Aktivní překladatelka a tlumočnice využívá své dlouholeté zkušenosti s německým jazykem ve
+                     vzdělávání dospělých. Při výuce jazyka se řídí heslem: Mozek je sval jako každý jiný, je třeba ho
+                     trénovat - pak se výsledky dostaví. Díky svému systematickému a pozitivnímu přístupu a schopnosti
+                     domluvit se (nejen v cizím jazyce) nemá problém spolupracovat v týmu různorodých lidí. Ráda pracuje
+                     na projektech, které mají smysl. Vystudovala germanistiku a historii na Filozofické fakultě v
+                     Olomouci.
                   </p>
-                  </div>
                </div>
-               <div class="modal-footer">
-               </div>
+            </div>
+            <div class="modal-footer">
             </div>
          </div>
       </div>
-      <div class="modal fade" id="team11Modal" tabindex="-1" role="dialog" aria-labelledby="team9Modal" aria-hidden="true">
-         <div class="modal-dialog teamModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+   </div>
+   <div class="modal fade" id="team4Modal" tabindex="-1" role="dialog" aria-labelledby="team4Modal" aria-hidden="true">
+      <div class="modal-dialog teamModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+               <div class="left-product-body">
+                  <div class="avatar"><img src="img/team/martinkova-open-agency.jpg" alt="Simona Martínková"
+                        class="img-responsive img-circle" /></div>
+                  <a class="btn btn-lg btn-primary" target="_top" href="mailto:simona.martinkova1@gmail.com"
+                     role="button">Kontaktujte mě</a>
                </div>
-               <div class="modal-body">
-                  <div class="left-product-body">
-                     <div class="avatar"><img src="img/team/julietta-ayrapetyan-open-agency.jpg" alt="Julietta Ayrapetyan" class="img-responsive img-circle" /></div>
-                     <a class="btn btn-lg btn-primary" href="ayrapetyan@openagency.cz"  role="button">Kontaktujte mě</a>
-                  </div>
-                  <div class="right-product-body">
-                     <h4>Julietta Ayrapetyan</h4>
-                     <p><i>Lektorka</i></p>
-                     <hr class="marginbot-50">
-                     <p>Na Novosibirské státní pedagogické univerzitě vystudovala angličtinu a francouzštinu, mluví také plynule rusky a česky. Ráda učí motivované studenty a využívá moderní technologie i nové vyučovací metody. Nepochybuje, že metoda OPEN LEARNING má velkou budoucnost. Učila pomaturitní, rekvalifikační a veřejné kurzy.</p>
-                  </div>
+               <div class="right-product-body">
+                  <h4>Simona Martínková</h4>
+                  <p><i>Lektorka</i></p>
+                  <hr class="marginbot-50">
+                  <p>Má bohaté zkušenosti s uplatňováním moderních vyučovacích metod v oblasti výuky cizích jazyků ve
+                     školách i vzdělávání dospělých. Je pozitivní, umí zaujmout a přesvědčit, má vynikající komunikační
+                     dovednosti v českém, anglickém a francouzském jazyce. Je autorkou prvních výukových materiálů k
+                     modulu Základní chemická terminologie. Vystudovala Pedagogickou fakultu v Olomouci a
+                     Filozoficko-přírodovědeckou fakultu v Opavě. Učila na vysoké i na základní škole.</p>
                </div>
-               <div class="modal-footer">
-               </div>
+            </div>
+            <div class="modal-footer">
             </div>
          </div>
       </div>
-      <div class="modal fade" id="team12Modal" tabindex="-1" role="dialog" aria-labelledby="team9Modal" aria-hidden="true">
-         <div class="modal-dialog teamModal">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+   </div>
+   <div class="modal fade" id="team5Modal" tabindex="-1" role="dialog" aria-labelledby="team5Modal" aria-hidden="true">
+      <div class="modal-dialog teamModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+               <div class="left-product-body">
+                  <div class="avatar"><img src="img/team/monika-kunzova-open-agency.jpg" alt="Monika Kunzová"
+                        class="img-responsive img-circle" /></div>
+                  <a class="btn btn-lg btn-primary" target="_top" href="mailto:monika.kunzova@gmail.com"
+                     role="button">Kontaktujte mě</a>
                </div>
-               <div class="modal-body">
-                  <div class="left-product-body">
-                     <div class="avatar"><img src="img/team/julietta-ayrapetyan-open-agency.jpg" alt="Julietta Ayrapetyan" class="img-responsive img-circle" /></div>
-                     <a class="btn btn-lg btn-primary" target="_top" href="mailto:ayrapetyan@openagency.cz"  role="button">Kontaktujte mě</a>
-                  </div>
-                  <div class="right-product-body">
-                     <h4>Veronika Skřontová</h4>
-                     <p><i>Obchodní asistentka</i></p>
-                     <hr class="marginbot-50">
-                     <p>Kreativní, zodpovědná a vytrvalá obchodní asistentka, která žila dva roky v Irsku, kde se přesvědčila o tom, jak moc je důležité umět cizí jazyk a kolik nových možností a příležitostí se tímto člověku otevírá, jak v pracovním, tak i v soukromém životě. V OPEN AGENCY zajišťuje dílčí obchodní činnosti.</p>
-                  </div>
+               <div class="right-product-body">
+                  <h4>Monika Kunzová</h4>
+                  <p><i>Lektorka</i></p>
+                  <hr class="marginbot-50">
+                  <p>Vystudovala angličtinu a francouzštinu na Filozofické fakultě Masarykovy univerzity v Brně a
+                     následně česko-francouzské magisterské studium veřejné správy na Ekonomicko-správní fakultě téže
+                     univerzity. V rámci studia absolvovala pobyty na Aarhus Universitet v Dánsku a na Université de
+                     Rennes 1 ve Francii, kde měla možnost seznámit se s různými vyučovacími metodami. Výuce angličtiny
+                     a francouzštiny se věnuje již od vysokoškolských studií a má rovněž bohaté zkušenosti s využitím
+                     cizích jazyků v praxi při výkonu povolání. Koncept Open Learning ji velice zaujal a baví ji dále
+                     prozkoumávat jeho možnosti a představovat je studentům ve firemních kurzech.</p>
                </div>
-               <div class="modal-footer">
-               </div>
+            </div>
+            <div class="modal-footer">
             </div>
          </div>
       </div>
-      <script src="js/jquery.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/jquery.easing.min.js"></script>
-      <script src="js/jquery.scrollTo.js"></script>
-      <script src="js/wow.min.js"></script>
-      <script src="js/video.js"></script>
-      <script src="js/custom.js"></script>
-      <script>
-         var prCn = 0;
-         var srCn1 = 0;
-         var srCn2 = 0;
+   </div>
+   <div class="modal fade" id="team6Modal" tabindex="-1" role="dialog" aria-labelledby="team6Modal" aria-hidden="true">
+      <div class="modal-dialog teamModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+               <div class="left-product-body">
+                  <div class="avatar"><img src="img/team/kosa-open-agency.jpg" alt="Peter Kóša"
+                        class="img-responsive img-circle" /></div>
+                  <a class="btn btn-lg btn-primary" target="_top" href="mailto:support@openagency.cz"
+                     role="button">Kontaktujte mě</a>
+               </div>
+               <div class="right-product-body">
+                  <h4>Peter Kóša</h4>
+                  <p><i>Programátor</i></p>
+                  <hr class="marginbot-50">
+                  <p>Absolvent MFF UK v Praze. Zabezpečuje technické zázemí projektů, vývoj aplikace, správu serverů a
+                     databází.</p>
+               </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="team7Modal" tabindex="-1" role="dialog" aria-labelledby="team7Modal" aria-hidden="true">
+      <div class="modal-dialog teamModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+               <div class="left-product-body">
+                  <div class="avatar"><img src="img/team/kamil-feidl-open-agency.jpg" alt="Kamil Feidl"
+                        class="img-responsive img-circle" /></div>
+                  <a class="btn btn-lg btn-primary" target="_top" href="mailto:feidl@openagency.cz"
+                     role="button">Kontaktujte mě</a>
+               </div>
+               <div class="right-product-body">
+                  <h4>Kamil Feidl</h4>
+                  <p><i>Metodik výuky cizích jazyků</i></p>
+                  <hr class="marginbot-50">
+                  <p>
+                     Žil několik let v Anglii, Ekvádoru, USA a Irsku. Aktivně se podílí na akcích neziskové organizace
+                     pro ochranu přírody, pracuje jako lektor angličtiny a španělštiny a mentor ve vodohospodářské
+                     sféře. Má zkušenosti z ocelářství, ochrany přírody, hoteliérství, ekonomiky a psychologie učení.
+                     Působil jako lektor angličtiny ve společnostech RWE, ČEZ, Autoheller, SmVak, ale i v malých a
+                     středních firmách. Je autorem brožury Jak se (ne)naučit cizí jazyk. Po letech vedení nejrůznější
+                     výuky a více než 13 000 odučených hodinách věří, že výukový systém OPEN LEARING dokáže rychle a
+                     kvalitně připravit pro praxi každého motivovaného studenta. Je to vysoce efektivní nastroj, který
+                     umožňuje učit se právě to, co potřebujete, a inspiruje k dalšímu studiu. V Open Agency má na
+                     starosti metodiku výukových modulů a metodické vedení lektorů.
+                  </p>
+               </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="team8Modal" tabindex="-1" role="dialog" aria-labelledby="team8Modal" aria-hidden="true">
+      <div class="modal-dialog teamModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+               <div class="left-product-body">
+                  <div class="avatar"><img src="img/team/zdenek-kuncar-open-agency.jpg" alt="Zdeněk Kunčar"
+                        class="img-responsive img-circle" /></div>
+                  <a class="btn btn-lg btn-primary" target="_top" href="mailto:zdenek.kuncar@openagency.cz"
+                     role="button">Kontaktujte mě</a>
+               </div>
+               <div class="right-product-body">
+                  <h4>Zdeněk Kunčar</h4>
+                  <p><i>Administrátor, online podpora</i></p>
+                  <hr class="marginbot-50">
+                  <p>Student informačních technologií na Aalborg University v Dánsku. Podílí se na tvorbě
+                     audiovizuálních materiálů pro studenty a na neustálém vývoji aplikace OPEN LEARNING. Své technické
+                     znalosti uplatňuje při poskytování online podpory uživatelům OPEN LEARNING.</p>
+               </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="team9Modal" tabindex="-1" role="dialog" aria-labelledby="team9Modal" aria-hidden="true">
+      <div class="modal-dialog teamModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+               <div class="left-product-body">
+                  <div class="avatar"><img src="img/team/silvie-kudelova-open-agency.jpg" alt="Silvie Kudelova"
+                        class="img-responsive img-circle" /></div>
+                  <a class="btn btn-lg btn-primary" target="_top" href="mailto:machovska@openagency.cz"
+                     role="button">Kontaktujte mě</a>
+               </div>
+               <div class="right-product-body">
+                  <h4>Silvie Machovská</h4>
+                  <p><i>Office manager</i></p>
+                  <hr class="marginbot-50">
+                  <p>Vystudovala jsem informační vědu a knihovnictví na Slezské univerzitě v Opavě. Po studiu jsem žila
+                     tři roky v Anglii, kde jsem získala Cambridge certifikát ESOL Skills for life (nejvyšší úroveň) a
+                     certifikát FCE. Angličtina se stala mým koníčkem, a proto se chci také zaměřit na její výuku. Mám
+                     roční zkušenost s vyučováním anglického jazyka začátečníků a středně pokročilých žáků různého věku.
+                     Nyní jsem na mateřské dovolené a chtěla bych ji využít k získání CAE certifikátu a ke vzdělávání
+                     s využitím OPEN LEARNING.</p>
+                  <p>S OPEN AGENCY spolupracuji, protože se nezaměřuje jen na každodenní využití angličtiny, ale
+                     specializuje se na odbornou angličtinu. Při studiu s OPEN LEARNING se neučím jen jazyk, ale
+                     vstřebávám plno nových odborných informací, které jsou navíc podávány zábavnou formou. Je velice
+                     důležité, abychom v dnešní době uměli anglicky vyjádřit například matematickou rovnici a ne jen
+                     mluvit o počasí.</p>
+               </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="team10Modal" tabindex="-1" role="dialog" aria-labelledby="team9Modal" aria-hidden="true">
+      <div class="modal-dialog teamModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+               <div class="left-product-body">
+                  <div class="avatar"><img src="img/team/barbora-stankova-open-agency.jpg" alt="Barbora Staňková"
+                        class="img-responsive img-circle" /></div>
+                  <a class="btn btn-lg btn-primary" target="_top" href="mailto:stankova@openagency.cz"
+                     role="button">Kontaktujte mě</a>
+               </div>
+               <div class="right-product-body">
+                  <h4>Barbora Staňková</h4>
+                  <p><i>Obchodní asistentka</i></p>
+                  <hr class="marginbot-50">
+                  <p>Studentka Vysoké školy báňské - Technické univerzity Ostrava, obor účetnictví a daně. Absolvovala
+                     zahraniční studijní pobyt Erasmus ve Španělsku a přesvědčila se, že jazykové vzdělávání otevírá
+                     nové jedinečné možnosti jak v pracovním, tak i v osobním životě. V OPEN AGENCY zajišťuje dílčí
+                     obchodní činnosti.</p>
+                  </p>
+               </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="team11Modal" tabindex="-1" role="dialog" aria-labelledby="team9Modal" aria-hidden="true">
+      <div class="modal-dialog teamModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+               <div class="left-product-body">
+                  <div class="avatar"><img src="img/team/julietta-ayrapetyan-open-agency.jpg" alt="Julietta Ayrapetyan"
+                        class="img-responsive img-circle" /></div>
+                  <a class="btn btn-lg btn-primary" href="ayrapetyan@openagency.cz" role="button">Kontaktujte mě</a>
+               </div>
+               <div class="right-product-body">
+                  <h4>Julietta Ayrapetyan</h4>
+                  <p><i>Lektorka</i></p>
+                  <hr class="marginbot-50">
+                  <p>Na Novosibirské státní pedagogické univerzitě vystudovala angličtinu a francouzštinu, mluví také
+                     plynule rusky a česky. Ráda učí motivované studenty a využívá moderní technologie i nové vyučovací
+                     metody. Nepochybuje, že metoda OPEN LEARNING má velkou budoucnost. Učila pomaturitní,
+                     rekvalifikační a veřejné kurzy.</p>
+               </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="team12Modal" tabindex="-1" role="dialog" aria-labelledby="team9Modal" aria-hidden="true">
+      <div class="modal-dialog teamModal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                     class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+               <div class="left-product-body">
+                  <div class="avatar"><img src="img/team/julietta-ayrapetyan-open-agency.jpg" alt="Julietta Ayrapetyan"
+                        class="img-responsive img-circle" /></div>
+                  <a class="btn btn-lg btn-primary" target="_top" href="mailto:ayrapetyan@openagency.cz"
+                     role="button">Kontaktujte mě</a>
+               </div>
+               <div class="right-product-body">
+                  <h4>Veronika Skřontová</h4>
+                  <p><i>Obchodní asistentka</i></p>
+                  <hr class="marginbot-50">
+                  <p>Kreativní, zodpovědná a vytrvalá obchodní asistentka, která žila dva roky v Irsku, kde se
+                     přesvědčila o tom, jak moc je důležité umět cizí jazyk a kolik nových možností a příležitostí se
+                     tímto člověku otevírá, jak v pracovním, tak i v soukromém životě. V OPEN AGENCY zajišťuje dílčí
+                     obchodní činnosti.</p>
+               </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/jquery.easing.min.js"></script>
+   <script src="js/jquery.scrollTo.js"></script>
+   <script src="js/wow.min.js"></script>
+   <script src="js/video.js"></script>
+   <script src="js/custom.js"></script>
+   <script>
+      var prCn = 0;
+      var srCn1 = 0;
+      var srCn2 = 0;
 
-         $.getJSON("produkty.json", function(data) {
-            console.log(data);
-            for (var i = 0; i < data.kurzy.length; i++) {
-              $('#jsonCourses').append('<div class="avatar"><img src="'+data.kurzy[i].vlajka+'" alt="Ikona produktu" class="img-responsive img-circle" /></div><div class="divid"><a href="'+data.kurzy[i].link+'" target="_blank">'+data.kurzy[i].nazev+'</a></div>');
-            }
-            for (var i = 0; i < data.produkty.length; i++) {
-                  $('#holder').append('<div class="col-oz-3 col-sm-3 col-md-4 '+data.produkty[i].kategorie+'"> <div class="boxed-grey"> <div class="inner"> <div class="avatar"><img src="'+data.produkty[i].ikona+'" alt="" class="img-responsive img-circle" /></div> <h5>'+data.produkty[i].nazev+'</h5> <div class="abs-button"> <p><a class="btn btn-lg btn-primary" href="#"  data-toggle="modal" data-target="#productModal'+data.produkty[i].id+'" role="button">Zobrazit více</a></p> </div> </div> </div> </div>');
-                  $('#jsonModals').append('<div class="modal fade productMod" id="productModal'+data.produkty[i].id+'" tabindex="-1" role="dialog" aria-labelledby="productModal'+data.produkty[i].id+'" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>  <h4>'+data.produkty[i].nazev+'</h4><p>'+data.produkty[i].nazevCizi+'</p></div><div class="modal-body"><div class="left-product-body"> <div class="avatar"><img src="'+data.produkty[i].ikona+'" alt="Ikona produktu" class="img-responsive img-circle" /></div><p class="author">Autor: '+data.produkty[i].autor+'</p></div><div class="right-product-body">'+data.produkty[i].popis+'</div></div><div class="modal-footer"><a class="btn btn-lg btn-primary" target="_top" href="mailto:kuncarova@openagency.cz?subject=Objednavka: '+data.produkty[i].nazev+'&body=Dobrý den, mám zájem o modul '+data.produkty[i].nazev+'."  role="button">Objednat</a></div></div></div></div>');
-                  prCn++;
-           }
-           for (var i = 0; i < data.sluzby.length; i++) {
-              $('#holder').append('<div class="col-oz-3 col-sm-3 col-md-4 '+data.sluzby[i].kategorie+'">  <div class="boxed-grey">  <div class="inner"> <div class="avatar"><img src="img/flags/oth.jpg" alt="" class="img-responsive img-circle" /></div> <h5>'+data.sluzby[i].nazev+'</h5><div class="abs-button"><p><a class="btn btn-lg btn-primary" href="#"  data-toggle="modal" data-target="#serviceModal'+data.sluzby[i].id+'" role="button">Zobrazit více</a></p></div></div></div></div>');
-              $('#jsonModals').append('<div class="modal fade productMod serviceMod" id="serviceModal'+data.sluzby[i].id+'" tabindex="-1" role="dialog" aria-labelledby="serviceModal'+data.sluzby[i].id+'" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>  <h4>'+data.sluzby[i].nazev+'</h4></div><div class="modal-body">'+data.sluzby[i].popis+'</div><div class="modal-footer"><a class="btn btn-lg btn-primary startBtn" href=""  role="button">Objednat</a></div></div></div></div>');
-              if (data.sluzby[i].kategorie == "ucitele") srCn1++;
-              if (data.sluzby[i].kategorie == "vyuka") srCn2++;
-           }
-           /*
-           $(document).ready(function () {
-             $('.productMod a').click(function () {
-               $('.productMod').modal('hide');
-               $('#start a').click();
-               return false
-             });
+      $.getJSON("produkty.json", function (data) {
+         console.log(data);
+         for (var i = 0; i < data.kurzy.length; i++) {
+            $('#jsonCourses').append('<div class="avatar"><img src="' + data.kurzy[i].vlajka + '" alt="Ikona produktu" class="img-responsive img-circle" /></div><div class="divid"><a href="' + data.kurzy[i].link + '" target="_blank">' + data.kurzy[i].nazev + '</a></div>');
+         }
+         for (var i = 0; i < data.produkty.length; i++) {
+            $('#holder').append('<div class="col-oz-3 col-sm-3 col-md-4 ' + data.produkty[i].kategorie + '"> <div class="boxed-grey"> <div class="inner"> <div class="avatar"><img src="' + data.produkty[i].ikona + '" alt="" class="img-responsive img-circle" /></div> <h5>' + data.produkty[i].nazev + '</h5> <div class="abs-button"> <p><a class="btn btn-lg btn-primary" href="#"  data-toggle="modal" data-target="#productModal' + data.produkty[i].id + '" role="button">Zobrazit více</a></p> </div> </div> </div> </div>');
+            $('#jsonModals').append('<div class="modal fade productMod" id="productModal' + data.produkty[i].id + '" tabindex="-1" role="dialog" aria-labelledby="productModal' + data.produkty[i].id + '" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>  <h4>' + data.produkty[i].nazev + '</h4><p>' + data.produkty[i].nazevCizi + '</p></div><div class="modal-body"><div class="left-product-body"> <div class="avatar"><img src="' + data.produkty[i].ikona + '" alt="Ikona produktu" class="img-responsive img-circle" /></div><p class="author">Autor: ' + data.produkty[i].autor + '</p></div><div class="right-product-body">' + data.produkty[i].popis + '</div></div><div class="modal-footer"><a class="btn btn-lg btn-primary" target="_top" href="mailto:kuncarova@openagency.cz?subject=Objednavka: ' + data.produkty[i].nazev + '&body=Dobrý den, mám zájem o modul ' + data.produkty[i].nazev + '."  role="button">Objednat</a></div></div></div></div>');
+            prCn++;
+         }
+         for (var i = 0; i < data.sluzby.length; i++) {
+            $('#holder').append('<div class="col-oz-3 col-sm-3 col-md-4 ' + data.sluzby[i].kategorie + '">  <div class="boxed-grey">  <div class="inner"> <div class="avatar"><img src="img/flags/oth.jpg" alt="" class="img-responsive img-circle" /></div> <h5>' + data.sluzby[i].nazev + '</h5><div class="abs-button"><p><a class="btn btn-lg btn-primary" href="#"  data-toggle="modal" data-target="#serviceModal' + data.sluzby[i].id + '" role="button">Zobrazit více</a></p></div></div></div></div>');
+            $('#jsonModals').append('<div class="modal fade productMod serviceMod" id="serviceModal' + data.sluzby[i].id + '" tabindex="-1" role="dialog" aria-labelledby="serviceModal' + data.sluzby[i].id + '" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>  <h4>' + data.sluzby[i].nazev + '</h4></div><div class="modal-body">' + data.sluzby[i].popis + '</div><div class="modal-footer"><a class="btn btn-lg btn-primary startBtn" href=""  role="button">Objednat</a></div></div></div></div>');
+            if (data.sluzby[i].kategorie == "ucitele") srCn1++;
+            if (data.sluzby[i].kategorie == "vyuka") srCn2++;
+         }
+         /*
+         $(document).ready(function () {
+           $('.productMod a').click(function () {
+             $('.productMod').modal('hide');
+             $('#start a').click();
+             return false
            });
-           */
-           $(document).ready(function () {
-              $('.materialy').click(function () {
-                $('#showers').removeClass('active');
-                if (prCn<10) {
+         });
+         */
+         $(document).ready(function () {
+            $('.materialy').click(function () {
+               $('#showers').removeClass('active');
+               if (prCn < 10) {
                   $('#showers').addClass('active');
-                }
-              });
-              $('.ucitele').click(function () {
-                $('#showers').removeClass('active');
-                if (srCn1<10) {
+               }
+            });
+            $('.ucitele').click(function () {
+               $('#showers').removeClass('active');
+               if (srCn1 < 10) {
                   $('#showers').addClass('active');
-                }
-              });
-              $('.vyuka').click(function () {
-                $('#showers').removeClass('active');
-                if (srCn2<10) {
+               }
+            });
+            $('.vyuka').click(function () {
+               $('#showers').removeClass('active');
+               if (srCn2 < 10) {
                   $('#showers').addClass('active');
-                }
-              });
-              $('.all').click(function () {
-                $('#showers').removeClass('active');
-              });
-           });
-        });
+               }
+            });
+            $('.all').click(function () {
+               $('#showers').removeClass('active');
+            });
+         });
+      });
 
-      </script>
-   </body>
+   </script>
+</body>
+
 </html>
