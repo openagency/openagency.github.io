@@ -103,12 +103,6 @@ a:hover, a:focus {
   margin-bottom: 10px;
 }
 
-.center-block {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
 #videoModal .modal-body {
   padding-top: 10px!important;
 }
@@ -429,6 +423,7 @@ textarea {
 }
 
 .productsrow {
+  float: left;
   width: 70%;
   min-height: 100px;
 }
@@ -1692,8 +1687,7 @@ Parallax
     width: 300px;
   }
   .intro {
-    height: 78%;
-    min-height: 365px;
+    height: 75%;
     max-height: 787px;
     padding: 0;
   }
@@ -1705,11 +1699,6 @@ Parallax
   }
   .intro-text {
     font-size: 25px;
-  }
-}
-@media(min-width:992px) {
-  .intro {
-    min-height: 600px;
   }
 }
 @media (max-width:768px) {

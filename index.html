@@ -698,6 +698,15 @@
                   <div class="wow bounceInDown" data-wow-delay="0.4s">
                      <div class="section-heading product-heading">
                         <h2>Obsah výukových materiálů</h2>
+                        <ul id="filterOptions">
+                           <li id="all" class="active"><a href="#" class="all">Všechny výukové materiály a kurzy</a>
+                              <span class="mark">|</span></li>
+                           <li id="materialy"><a href="#" class="materialy">Výukové materiály</a> <span
+                                 class="mark">|</span></li>
+                           <li id="ucitele"><a href="#" class="ucitele">Certifikace učitelů a lektorů</a><span
+                                 class="mark">|</span></li>
+                           <li id="vyuka"><a href="#" class="vyuka">Moderní výuka</a>
+                        </ul>
                      </div>
                   </div>
                </div>
@@ -709,9 +718,35 @@
             <div class="col-lg-2 col-lg-offset-5">
                <hr class="marginbot-50">
             </div>
-
-            <div class="productsrow center-block">
-               <div id="holder">
+         </div>
+         <div class="productsrow">
+            <div id="holder">
+            </div>
+            <div id="showers">
+               <div id="showAll">
+                  <a href="#">Zobrazit více</a>
+               </div>
+               <div id="hideAll">
+                  <a class="active" href="#">Zobrazit méně</a>
+               </div>
+            </div>
+         </div>
+         <div class="sidebar">
+            <div class="wow bounceInUp" data-wow-delay="0.5s">
+               <div class="boxed-grey demo">
+                  <div class="inner">
+                     <a class="btn btn-lg btn-primary demo-btn" href="#" data-toggle="modal" data-target="#demoModal"
+                        role="button">Vyzkoušet lekci zdarma</a>
+                  </div>
+               </div>
+            </div>
+            <div class="wow bounceInUp" data-wow-delay="0.7s">
+               <div class="boxed-grey twitter">
+                  <div class="inner">
+                     <a class="twitter-timeline" href="https://twitter.com/openagency_cz"
+                        data-widget-id="455053168536064000">Tweets by @openagency_cz</a>
+                     <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                  </div>
                </div>
             </div>
          </div>
@@ -1091,21 +1126,74 @@
             </div>
          </div>
          <div class="row">
-            <div class="col-xs-12">
+            <div class="col-lg-8 three-col">
+               <div class="boxed-grey contact">
+                  <form id="contact-form"
+                     action="https://docs.google.com/forms/d/1eBVIuvNzcj9c6CQ4GdnCmD38l7nONRe1v1VSCbsAWWY/formResponse"
+                     method="POST" target="_blank">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="form-group">
+                              <label>
+                                 Jméno</label>
+                              <input type="text" class="form-control" name="entry.911354995" id="entry_911354995"
+                                 placeholder="Vaše jméno" required="required" />
+                           </div>
+                           <div class="form-group">
+                              <label>
+                                 Vaše společnost</label>
+                              <input type="text" class="form-control" name="entry.152716316" id="entry_152716316"
+                                 placeholder="Jméno Vaší společnost" />
+                           </div>
+                           <div class="form-group">
+                              <label>
+                                 Telefon</label>
+                              <input type="text" class="form-control" name="entry.358642534" id="entry_358642534"
+                                 placeholder="Váš telefon" required="required" />
+                           </div>
+                           <div class="form-group">
+                              <label>
+                                 Email </label>
+                              <div class="input-group">
+                                 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                 </span>
+                                 <input type="email" class="form-control" id="entry_1866802761" name="entry.1866802761"
+                                    placeholder="Váš Email" required="required" />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="form-group">
+                              <label>
+                                 Zpráva</label>
+                              <textarea id="entry_485693227" name="entry.485693227" class="form-control" rows="9"
+                                 cols="25" required="required" placeholder="Vaše zpráva"></textarea>
+                           </div>
+                           <input type="hidden" name="draftResponse" value="[,,&quot;-5450378872991277903&quot;]">
+                           <input type="hidden" name="pageHistory" value="0">
+                           <input type="hidden" name="fbzx" value="-5450378872991277903">
+                        </div>
+                        <div class="col-md-12">
+                           <button type="submit" name="submit" class="btn btn-skin pull-right" id="btnContactUs">
+                              Odeslat</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+            <div class="col-lg-4 quarter-col">
                <div class="widget-contact">
-                  <p>Pokud máte zájem o naše produkty a služby, napište nám email, nebo nám zavolejte.</p>
+                  <h5>Adresa</h5>
                   <address>
                      <strong>OPEN AGENCY s.r.o.</strong><br>
                      Solná 45/19, 74601, Opava<br>
+                     Naše kancelář:<br>
+                     Pekařská 21, 74601, Opava<br>
                      tel: +420 608 658 151
                   </address>
                   <address>
                      <strong>Email</strong><br>
                      <a target="_top" href="mailto:kuncarova@openagency.cz">kuncarova@openagency.cz</a>
-                  </address>
-                  <address>
-                     <strong>Podpora</strong><br>
-                     <a target="_top" href="mailto:support@openagency.cz">support@openagency.cz</a>
                   </address>
                   <!--<address>
                         <strong>Přidejte si nás</strong><br>
@@ -1610,6 +1698,7 @@
       var srCn2 = 0;
 
       $.getJSON("produkty.json", function (data) {
+         console.log(data);
          for (var i = 0; i < data.kurzy.length; i++) {
             $('#jsonCourses').append('<div class="avatar"><img src="' + data.kurzy[i].vlajka + '" alt="Ikona produktu" class="img-responsive img-circle" /></div><div class="divid"><a href="' + data.kurzy[i].link + '" target="_blank">' + data.kurzy[i].nazev + '</a></div>');
          }
