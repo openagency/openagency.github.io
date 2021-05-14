@@ -57,67 +57,30 @@
 });
 
 
+    $(document).ready(function () {
+        $('a#showAll').click(function () {
+            $('#holder').children().hide();
+            $('#holder').children().fadeIn(1000);
 
-  $(document).ready(function () {
-    $('#showAll a').click(function () {
-        var isActive = $(this).attr('class');
-        var isAll = $('#all').attr('class');
-        var isMaterialy = $('#materialy').attr('class');
-        var isUcitele = $('#ucitele').attr('class');
-        var isVyuka = $('#vyuka').attr('class');
-         
-         if (isActive!='active') {               
-            if (isAll == 'active') {
-              $('#holder').children().hide();                     
-              $('#holder').children().fadeIn(1000); 
-            } else if(isMaterialy == 'active') {
-                $('#holder').children().hide();
-                $('#holder').children('div.materialy').fadeIn(1000);
-            } else if(isUcitele == 'active') {
-                $('#holder').children().hide();
-                $('#holder').children('div.ucitele').fadeIn(1000);
-            }  else if(isVyuka == 'active') {
-                $('#holder').children().hide();
-                $('#holder').children('div.vyuka').fadeIn(1000);
-            } 
-                        
-            $('#showAll a').addClass('active');
-            $('#hideAll a').removeClass('active');
-            }
-        return false;
+            $('a#showAll').addClass('hide').removeClass('active');
+            $('a#hideAll').removeClass('hide').addClass('active');
+
+            return false;
+        });
     });
-});
 
 
-  $(document).ready(function () {
-    $('#hideAll a').click(function () {
-        var isActive = $(this).attr('class');
-        var isAll = $('#all').attr('class');
-       var isMaterialy = $('#materialy').attr('class');
-        var isUcitele = $('#ucitele').attr('class');
-        var isVyuka = $('#vyuka').attr('class');
-         
-         if (isActive!='active') {               
-            if (isAll == 'active') {
-              $('#holder').children().hide();                     
-              $('#holder').children().slice(0,9).fadeIn(1000); 
-            } else if(isMaterialy == 'active') {
-                $('#holder').children().hide();
-                $('#holder').children('div.materialy').slice(0,9).fadeIn(1000);
-            } else if(isUcitele == 'active') {
-                $('#holder').children().hide();
-                $('#holder').children('div.ucitele').slice(0,9).fadeIn(1000);
-            }  else if(isVyuka == 'active') {
-                $('#holder').children().hide();
-                $('#holder').children('div.vyuka').slice(0,9).fadeIn(1000);
-            } 
-                        
-            $('#showAll a').removeClass('active');
-            $('#hideAll a').addClass('active');
-            }
-        return false;
+    $(document).ready(function () {
+        $('a#hideAll').click(function () {
+            $('#holder').children().hide();
+            $('#holder').children().slice(0, 9).fadeIn(1000);
+
+            $('a#hideAll').addClass('hide').removeClass('active');
+            $('a#showAll').removeClass('hide').addClass('active');
+
+            return false;
+        });
     });
-});
 
 
 $('#videoModal').on('hidden.bs.modal', function () {
