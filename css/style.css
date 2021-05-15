@@ -198,10 +198,14 @@ textarea {
   resize: none;
 }
 
+#showers {
+  display: block;
+  width: 100%;
+}
+
 #showAll, #hideAll {
   padding-bottom: 20px;
   width: 100%;
-  float: left;
 }
 
 #showAll .active, #hideAll .active, .active #showAll, .active #hideAll {
